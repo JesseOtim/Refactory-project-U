@@ -1,0 +1,61 @@
+ body{
+    width: 100%;
+    height: 109vh;
+    font-family: Arial, sans-serif;
+    background: url(images/dan-meyers\ \(2\).jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    
+ }
+
+ .container{
+    width: 100%;
+    min-height: auto;
+ }
+
+ .logo{
+    color: darkgreen;
+    font-weight: bold;
+    font-size: 30px;
+ }
+ span{
+    color: orangered;
+ }
+ .button{
+    margin-right: 20px;
+ }
+
+ .content {
+   width: 100%;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   text-align: center;
+   color: darkgreen;
+}
+
+.content h1 {
+   font-size: 65px;
+   margin-top: 80px;
+   font-family: 'Times New Roman';
+   color: black;
+   font-weight: bold;
+
+}
+
+.content p {
+   margin: 20px;
+   font-weight: bold;
+   line-height: 25px;
+   color: white;
+   letter-spacing: 2px;
+   font-size: 15px;
+}
+
+span1{
+   color: darkgreen;
+}
+
+
+

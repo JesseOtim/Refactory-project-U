@@ -1,0 +1,121 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+.main {
+   width: 100%;
+   background: url(images/annie-spratt-lady\ walking.jpg);
+   background-position: center;
+   background-size: cover;
+   height: 109vh;
+}
+
+.navbar {
+   width: 1200px;
+   height: 75px;
+   margin: auto;
+}
+
+.icon {
+   width: 200px;
+   float: left;
+   height: 70px;
+}
+
+.logo {
+   color: darkgreen;
+   font-size: 30px;
+   font-family: Arial;
+   padding-left: 20px;
+   float: left;
+   padding-top: 10px;
+   font-weight: bold;
+}
+
+span {
+   color: orangered;
+}
+
+/* focus on the forms appearance,width, height and position */
+.form {
+   width: 300px;
+   height: auto ;
+   background: linear-gradient(To top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%);
+   position: absolute;
+   top: 30px;
+   left: 870px;
+   border-radius: 10px;
+   padding: 25px;
+}
+
+.form h1 {
+   width: 220px;
+   font-size: 25px;
+   font-family: Arial;
+   font-weight: bold;
+   text-align: center;
+   color: darkgreen;
+   background-color: white;
+   border-radius: 10px;
+   margin: 2px;
+   padding: 8px;
+}
+
+.form input{
+   width: 220px;
+   height: 35px;
+   background: transparent;
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   border-bottom: 2px solid orangered;
+   color:white;
+   margin-top: 2px;
+   font-size: 15px;
+   letter-spacing: 1px;
+}
+
+.form input:focus{
+   outline: none;
+}
+
+ label{
+   color: white;
+   font-size: 15px;
+ }
+
+::placeholder{
+   color: gray;
+   font-family: Arial;
+
+}
+
+.btn{
+   width: 240px;
+   height: 50px;
+   border: none;
+   margin-top: 30px;
+   font-size: 40px;
+   border-radius: 10px;
+   cursor: pointer;
+   transition: 0.5s ease;
+}
+
+.btn a{
+   text-decoration: none;
+   color: black;
+   font-weight: bold;
+}
+
+ .form .link{
+   color: white;
+   text-align: center;
+
+ }
+ .form .link a{
+   text-decoration: none;
+   color: orangered;
+
+ }
+
