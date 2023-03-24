@@ -21,12 +21,12 @@
         <div class="col align-self-center">
             <div class="logInbox">
                 <h1 class="logo"><a href="index.html"><span>| U</span>-Farm</a></h1>
-                <form name="myForm" id="myForm">
+                <form name="myForm" id="myForm" action="" onsubmit="return ValidatemyForm();" method="post">
                     <div class="mb-3">
                         <label>Email Address</label>
                         <input class="email" id="email" size="50" placeholder="bayo@gmail.com" name="email">
                         <div class="text-danger font-weight-bold small"></div>
-                        <small id="emailErr"></small>
+                        <small id="mailErr"></small>
 
 
                     </div>
@@ -34,6 +34,7 @@
                         <label>Password</label>
                         <input type="password" class="password" id="password" size="50">
                         <div class="text-danger font-weight-bold small"></div>
+                        <small id="passwordErr"></small>
 
                     </div>
                     <!-- button from button sizes -->

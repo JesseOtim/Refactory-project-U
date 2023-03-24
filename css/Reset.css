@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 * {
     margin: 0;
     padding: 0;
@@ -26,6 +26,14 @@ span {
     color: orangered;
 }
 
+form input {
+    width: 424px;
+    padding: 7px;
+    border: none;
+    border: 1px solid grey;
+    border-radius: 15px;
+ }
+ 
 fieldset {
     background-color: white;
   }
@@ -51,58 +59,4 @@ fieldset {
 .liw a {
     text-decoration: none;
     color: darkgreen;
-=======
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    width: 100%;
-    font-family: Arial, sans-serif;
-    background: white;
-}
-
-.header {
-    color: darkgreen;
-}
-
-.header-logo {
-    font-size: 30px;
-    font-weight: bold;
-    padding-top: 5px;
-    margin-left: 40px;
-    margin-bottom: 50px;
-}
-
-span {
-    color: orangered;
-}
-
-fieldset {
-    background-color: white;
-  }
-  
-
-.container {
-    width: 100%;
-    min-height: auto;
-    font-weight: bold;
-}
-
-.container h1 {
-    margin-bottom: 25px;
-}
-
-
-.liw {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 18px;
-}
-
-.liw a {
-    text-decoration: none;
-    color: darkgreen;
->>>>>>> 05fb1da6ec1a4a32a18732ed60a5957094dc5c03
 }

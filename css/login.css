@@ -63,11 +63,6 @@
         border-radius: 15px;
         outline: none;
     }
-    
-    .error {
-        border: 5px solid red;
-      }
-      
 
     .btn {
         width: 424px;
