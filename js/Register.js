@@ -90,7 +90,7 @@ const ValidatemyForm = () => {
     emailError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++;
-    return false;
+    return false
   } else if (email.value.length < 20) {
     email.style.border = "1px solid red";
     emailError.textContent = "Please put in a correct email address";
@@ -154,8 +154,8 @@ const ValidatemyForm = () => {
       if(!(female.checked && male.checked)){
         genderError.textContent = "Please select gender";
         genderError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-      //   return false;
         error++
+        return false;
       }else {
         genderError.textContent = "";
       }
