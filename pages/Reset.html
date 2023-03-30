@@ -18,7 +18,7 @@
       <h1 class="header-logo"><span>| U</span>-Farm</h1>
     </div>
     <div class="container">
-      <form action="/" onsubmit="return ValidateForm();" method="post">
+      <form action="/" onreset="return ValidateForm();" method="post">
         <fieldset>
           <div class="mb-3">
             <h1>Forgot your Password</h1>
@@ -40,9 +40,7 @@
           </div>
           <div class="col row">
             <div class="col form-group">
-              <button class="btn btn-success" type="button">
-                Request reset link
-              </button>
+              <input class="btn btn-primary" type="reset" value="reset" />
             </div>
           </div>
           <p class="liw"><a href="../Auth/login.html">Back to Login</a></p>

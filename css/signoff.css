@@ -1,0 +1,28 @@
+body {
+    width: 100%;
+    height: 400px;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+ }
+
+ li{
+   list-style: none;
+ }
+
+ .container {
+    width: 100%;
+    min-height: auto;
+ }
+
+ .logo {
+    color: darkgreen;
+    font-weight: bold;
+    font-size: 30px;
+   
+   
+ }
+
+ span {
+   color: orangered;
+  
+ }
