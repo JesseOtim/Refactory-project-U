@@ -1,60 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <link href="../css/signup.css" rel="stylesheet">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/signup.css" rel="stylesheet" />
     <title>U-Farm</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container-main">
-        <div class="row">
-            <div class="col">
-                <img src="../images/annie-spratt-lady walking.jpg">
-            </div>
-            <div class="col align-self-center">
-                <div class="logInbox">
-                    <h1 class="logo"><span>| U</span>-Farm</h1>
-                    <form name="/" id="form" action="/" onsubmit="return ValidateForm(event);" method="post">
-                        <div class="mb-3">
-                            <label>First name</label>
-                            <input id="fn" size="50" placeholder="" name="firstname">
-                            <small id="fnErr"></small>
-                            <label>Last name</label>
-                            <input type="Lastname" class="Lastname" id="lname" size="50" placeholder="" name="lastname">
-                            <small id="lnameErr"></small>
-                            <label>Email address</label>
-                            <input type="email" class="email" id="email" size="50" placeholder="bayo@gmail.com"
-                                name="email">
-                                <small id="emailErr"></small>
-                            <div class="text-danger font-weight-bold small"></div>
-                            <label>Password</label>
-                            <input type="password" class="password" id="password" size="50">
-                            <small id="passwordErr"></small>
-                            <div class="text-danger font-weight-bold small"></div>
-                            <label>Confirm password</label>
-                            <input type="password" class="password" id="conpassword" size="50">
-                            <small id="conpasswordErr"></small>
-                            <div class="text-danger font-weight-bold small"></div>
-                        </div>
-                        
-                        <!-- button from button sizes  -->
-                        <button class="btn btn-success btn-lg btn-block">SIGN UP</button>
-                        <p>Already have an account?<a href="../Auth/login.html"> Login here.</a></p>
-                        <p><a href="../index.html">Go back</a> Home</p>
-
-
-                    </form>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col">
+          <img src="../images/annie-spratt-lady walking.jpg" />
         </div>
+        <div class="col align-self-center">
+          <div class="logInbox">
+            <h1 class="logo"><span>| U</span>-Farm</h1>
+            <form
+              name="/"
+              id="form"
+              action="/"
+              onsubmit="return ValidateForm(event);"
+              method="POST"
+            >
+              <div class="mb-3">
+                <label>First name</label>
+                <input id="fn" size="50" placeholder="" name="firstname" />
+                <small id="fnErr"></small>
+                <label>Last name</label>
+                <input
+                  type="Lastname"
+                  class="Lastname"
+                  id="lname"
+                  size="50"
+                  placeholder=""
+                  name="lastname"
+                />
+                <small id="lnameErr"></small>
+                <label>Email address</label>
+                <input
+                  type="email"
+                  class="email"
+                  id="email"
+                  size="50"
+                  placeholder="bayo@gmail.com"
+                  name="email"
+                />
+                <small id="emailErr"></small>
+                <div class="text-danger font-weight-bold small"></div>
+                <div class="mb-3">
+                  <label>Password</label>
+                  <input
+                    type="password"
+                    class="password"
+                    id="password"
+                    size="50"
+                  />
+                  <small id="passwordErr"></small>
+                  <div class="text-danger font-weight-bold small"></div>
+                  <label>Confirm password</label>
+                  <input
+                    type="password"
+                    class="password"
+                    id="confirmpassword"
+                    size="50"
+                  />
+                  <small id="confirmpasswordErr"></small>
+                  <div class="text-danger font-weight-bold small"></div>
+                </div>
+              </div>
+
+              <!-- button from button sizes  -->
+              <button class="btn btn-success btn-lg btn-block">SIGN UP</button>
+              <p>
+                Already have an account?<a href="../Auth/login.html">
+                  Login here.</a
+                >
+              </p>
+              <p><a href="../index.html">Go back</a> Home</p>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="../js/signup.js"></script>
-</body>
-
+  </body>
 </html>

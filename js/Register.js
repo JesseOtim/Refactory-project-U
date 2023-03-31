@@ -1,5 +1,5 @@
 const ValidatemyForm = () => {
-  'use strict'
+  "use strict";
   let error = 0;
   const firstname = document.getElementById("firstname");
   const lastname = document.getElementById("lastname");
@@ -8,7 +8,8 @@ const ValidatemyForm = () => {
   const uniqueid = document.getElementById("uniqueid");
   const female = document.getElementById("female");
   const male = document.getElementById("male");
-
+  const role = document.getElementById("inputState");
+  const roleValue = role.value;
 
   //
   let firstnameError = document.getElementById("fnameErr");
@@ -17,6 +18,7 @@ const ValidatemyForm = () => {
   let passwordError = document.getElementById("passwordErr");
   let uniqueError = document.getElementById("uniqueErr");
   let genderError = document.getElementById("genderErr");
+  let roleError = document.getElementById("roleErr");
 
   if (firstname.value == "") {
     firstname.style.border = "2px solid red";
@@ -125,6 +127,24 @@ const ValidatemyForm = () => {
     passwordError.innerHTML = "";
   }
 
+  //Role validation
+
+  if (
+    roleValue !== "Agricultral Officer (AO)" &&
+    roleValue !== "Farmer One (FO)" &&
+    roleValue !== "Urban Farmer (UF)"
+  ) {
+    role.style.border = "2px solid red";
+    roleError.textContent = "Please select a valid role";
+    roleError.style =
+      "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++;
+    return false;
+  } else {
+    role.style.border = "2px solid darkgreen";
+    roleError.innerHTML = "";
+  }
+
   // unique number validations
   const unregex = /^AO-([0-9]{3})+$/;
   const ufregex = /^UF-([0-9]{3})+$/;
@@ -143,7 +163,7 @@ const ValidatemyForm = () => {
       uniqueid.value.match(foregex)
     )
   ) {
-    uniqueid.style.border = "1px solid red";
+    uniqueid.style.border = "2px solid red";
     uniqueError.innerHTML = "Unique number must follow this formart AO-000";
     uniqueError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
