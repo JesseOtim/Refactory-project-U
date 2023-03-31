@@ -69,10 +69,16 @@ ul li a:hover {
   transform: translate(-50%, -50%);
 }
 
+.centered p {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 img {
   width: 100%;
   height: auto;
- border-radius: 15px;
+  border-radius: 15px;
 }
 
 h1 {
@@ -81,20 +87,34 @@ h1 {
   color: white;
 }
 
-.header{
+.header {
   font-weight: bold;
 }
 
-#container-fluid{
+h2 {
+  font-weight: bold;
+}
+
+p {
+  font-size: 18px;
+}
+
+#container-fluid {
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-.container{
+.container {
   background-color: antiquewhite;
   margin-bottom: 50px;
-  }
+}
 
+.container h2{
+  font-weight: bold;
+}
+.container p {
+font-size: 18px;
+}
 
 /* .content-header {
   font-size: 50px;
@@ -155,6 +175,7 @@ h3 {
   padding-top: 15px;
   font-size: 30px;
   color: darkgreen;
+  text-align: justify;
 }
 
 .footer-menu ul li {
@@ -175,12 +196,12 @@ h3 {
   color: darkgreen;
 }
 
-.icons{
-   float: right;
+.icons {
+  float: right;
 }
 
-.icons i{
-    padding-left: 20px;
-    margin-top: 40px;
-    cursor: pointer;
-} 
+.icons i {
+  padding-left: 20px;
+  margin-top: 40px;
+  cursor: pointer;
+}
