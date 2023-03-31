@@ -64,7 +64,7 @@ ul li a:hover {
 
 .centered {
   position: absolute;
-  top: 70%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -72,15 +72,31 @@ ul li a:hover {
 img {
   width: 100%;
   height: auto;
-  border-radius: 25%;
+ border-radius: 15px;
 }
 
 h1 {
   font-size: 50px;
   font-weight: bold;
+  color: white;
 }
 
-.content-header {
+.header{
+  font-weight: bold;
+}
+
+#container-fluid{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.container{
+  background-color: antiquewhite;
+  margin-bottom: 50px;
+  }
+
+
+/* .content-header {
   font-size: 50px;
   font-weight: bold;
   justify-content: center;
@@ -126,13 +142,13 @@ h3 {
   font-size: 15px;
   font-weight: bold;
   border-radius: 50px;
-}
+} */
 
 .footer {
   color: black;
-  height: 120px;
-  margin-top: 40%;
-  border-top: 2px solid gray;
+  height: 100px;
+  margin-top: 20%;
+  border-top: 2px solid orangered;
 }
 
 .footer-logo {
@@ -143,7 +159,7 @@ h3 {
 
 .footer-menu ul li {
   margin-left: 70px;
-  margin-top: 30px;
+  margin-top: 10px;
   font-size: 15px;
 }
 

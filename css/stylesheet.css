@@ -13,7 +13,7 @@ body {
    list-style: none;
  }
 
- .container {
+ .container-fluid{
     width: 100%;
     min-height: auto;
  }
