@@ -30,8 +30,7 @@ const ValidatemyForm = (event) => {
   }
 
   //password validation
-  const passwordregex =
-    /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d){8,20}$/;
+  const passwordregex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
 
   if (password.value == "") {
     password.style.border = "2px solid red";
