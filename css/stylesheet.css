@@ -1,110 +1,208 @@
 body {
-    width: 100%;
-    height: 400px;
-    font-family: Arial, sans-serif;
-    background: url(/images/dan-meyers\ \(2\).jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow-x: hidden;
+   width: 100%;
+   height: 400px;
+   font-family: Arial, sans-serif;
+   overflow-x: hidden;
  }
-
- li{
+ 
+ li {
    list-style: none;
  }
-
- .container-fluid{
-    width: 100%;
-    min-height: auto;
+ 
+ .container {
+   width: 100%;
+   min-height: auto;
  }
-
+ 
  .logo {
-    color: darkgreen;
-    font-weight: bold;
-    font-size: 30px;
-   
-   
+   color: darkgreen;
+   font-weight: bold;
+   font-size: 30px;
  }
-
+ 
  span {
    color: orangered;
-  
  }
-
+ 
  .menu {
    float: left;
    height: 40px;
-}
-
-ul{
+ }
+ 
+ ul {
    float: left;
    display: flex;
-}
-
-ul li{
+ }
+ 
+ ul li {
    margin-left: 70px;
    margin-top: 20px;
    font-size: 15px;
-
-}
-
-ul li a{
+ }
+ 
+ ul li a {
    text-decoration: none;
-   color:black;
+   color: black;
    font-family: cursive;
    font-weight: bold;
    transition: 0.4s ease;
-}
-
-ul li a:hover{
+ }
+ 
+ ul li a:hover {
    color: orangered;
-}
-
-
+ }
+ 
  .button {
-    margin-right: 20px;
+   margin-right: 20px;
  }
-
- .content {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: darkgreen;
+ 
+ .container-fluid {
+   position: relative;
+   text-align: center;
+   color: black;
  }
-
- .content h1 {
-    font-size: 65px;
-    margin-top: 80px;
-    font-family: 'Times New Roman';
-    color: black;
-    font-weight: bold;
-
+ 
+ .centered {
+   position: absolute;
+   top: 60%;
+   left: 50%;
+   transform: translate(-50%, -50%);
  }
-
- .content p {
-    margin: 20px;
-    font-family: cursive;
-    font-weight: bold;
-    line-height: 25px;
-    color: white;
-    letter-spacing: 2px;
-    font-size: 15px;
+ 
+ .centered p {
+   color: white;
+   font-size: 20px;
+   font-weight: bold;
  }
-
- .btn-btn{
-   width: 100px;
-   height: 50px;
+ 
+ img {
+   width: 100%;
+   height: auto;
    border-radius: 15px;
-   font-size: 15px;
+ }
+ 
+ h1 {
+   font-size: 50px;
    font-weight: bold;
    color: white;
-   background-color: darkgreen;
+ }
+ 
+ .header {
+   font-weight: bold;
+ }
+ 
+ h2 {
+   font-weight: bold;
+ }
+ 
+ p {
+   font-size: 18px;
+ }
+ 
+ #container-fluid {
+   margin-top: 50px;
+   margin-bottom: 50px;
+ }
+ 
+ .container {
+   background-color: antiquewhite;
+   margin-bottom: 50px;
+ }
+ 
+ .container h2{
+   font-weight: bold;
+ }
+ .container p {
+ font-size: 18px;
+ }
+ 
+ /* .content-header {
+   font-size: 50px;
+   font-weight: bold;
+   justify-content: center;
+   align-content: center;
+ }
+ 
+ span1 {
+   color: darkgreen;
+ }
+ 
+ h3 {
+   margin-top: 50px;
+ }
+ 
+ .par {
+   font-size: 20px;
+ }
+ 
+ .card {
+   float: left;
+   margin-left: 30px;
+   margin-top: 25px;
+   border-top: 2px solid orangered;
+   border-bottom: 2px solid darkgreen;
+ }
+ 
+ .card img {
+   border-bottom-right-radius: 50%;
+ }
+ 
+ .card-title {
+   font-size: 25px;
+   font-weight: bold;
+   color: orangered;
+ }
+ 
+ .card-text {
+   font-size: 15px;
+   font-weight: bold;
+ }
+ 
+ .card button {
+   font-size: 15px;
+   font-weight: bold;
+   border-radius: 50px;
+ } */
+ 
+ .footer {
+   color: black;
+   height: 100px;
+   margin-top: 20%;
+   border-top: 2px solid orangered;
+ }
+ 
+ .footer-logo {
+   padding-top: 15px;
+   font-size: 30px;
+   color: darkgreen;
+   text-align: justify;
+ }
+ 
+ .footer-menu ul li {
+   margin-left: 70px;
+   margin-top: 10px;
+   font-size: 15px;
+ }
+ 
+ .footer menu ul li a {
+   text-decoration: none;
+   color: black;
+   font-family: cursive;
+   font-weight: bold;
    transition: 0.4s ease;
-   border: none;
  }
-
- .btn-btn:hover{
-   background: orangered;
+ 
+ .footer-menu ul li a:hover {
+   color: darkgreen;
  }
+ 
+ .icons {
+   float: right;
+ }
+ 
+ .icons i {
+   padding-left: 20px;
+   margin-top: 40px;
+   cursor: pointer;
+ }
+ 
