@@ -31,13 +31,20 @@
             >
               <div class="mb-3">
                 <label>First name</label>
-                <input id="fn" size="50" placeholder="" name="firstname" />
+                <input
+                  type="Firstname"
+                  class="Firstname"
+                  id="firstname"
+                  size="50"
+                  placeholder=""
+                  name="firstname"
+                />
                 <small id="fnErr"></small>
                 <label>Last name</label>
                 <input
                   type="Lastname"
                   class="Lastname"
-                  id="lname"
+                  id="lastname"
                   size="50"
                   placeholder=""
                   name="lastname"
@@ -57,6 +64,7 @@
                 <div class="mb-3">
                   <label>Password</label>
                   <input
+                    name="password"
                     type="password"
                     class="password"
                     id="password"
@@ -77,7 +85,13 @@
               </div>
 
               <!-- button from button sizes  -->
-              <button class="btn btn-success btn-lg btn-block">SIGN UP</button>
+
+              <button
+                class="btn btn-success btn-lg btn-block"
+                id="submitbutton"
+              >
+                SIGN UP
+              </button>
               <p>
                 Already have an account?<a href="../Auth/login.html">
                   Login here.</a
