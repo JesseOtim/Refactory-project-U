@@ -9,7 +9,7 @@ body {
    list-style: none;
  }
  
- .container {
+ .container-fluid {
    width: 100%;
    min-height: auto;
  }
@@ -25,13 +25,12 @@ body {
  }
  
  .menu {
-   float: left;
    height: 40px;
  }
  
  ul {
-   float: left;
-   display: flex;
+  float: left;
+  display: flex;
  }
  
  ul li {
