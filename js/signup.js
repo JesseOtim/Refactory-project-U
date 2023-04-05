@@ -183,7 +183,7 @@ async function newSignup(event) {
         if (data.status == 201) {
             // alert("successful sign up")
             setTimeout(myFunction(), 9000);
-            window.location = 'clients.html'
+            window.location = '../Auth/login.html'
         }
 
     } catch (error) {
