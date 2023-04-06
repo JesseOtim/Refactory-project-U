@@ -46,14 +46,16 @@ span1{
 
 
 #container-fluid{
-    background-color: gray;
+    background-color: goldenrod;
     padding-top: 10px;
     padding-bottom: 10px;
-    height: 140px;
+    height: 200px;
 }
 
 .card{
+    margin-top: 25px;
     border-radius: 20px;
+    padding-bottom: 30px;
 }
 /* 
 #card1{
