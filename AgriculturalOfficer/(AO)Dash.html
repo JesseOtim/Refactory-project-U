@@ -168,7 +168,7 @@
 
     <!-- Table Data -->
     <div class="container">
-    <h3>Data </h3>
+    <h3>Registered FOs </h3>
     <button
       type="button"
       class="btn btn-success"
@@ -189,7 +189,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Register FarmerOne</h1>
             <button
               type="button"
               class="btn-close"
@@ -199,18 +199,72 @@
           </div>
           <div class="modal-body">
             <form>
-              <div class="mb-3">
-                <label for="recipient-name" class="col-form-label"
-                  >Recipient:</label
-                >
-                <input type="text" class="form-control" id="recipient-name" />
+
+              <div class="row">
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">First name</label>
+                <input type="firstname" class="form-control" id="firstname" />
+                <small id="fnameErr"></small>
               </div>
-              <div class="mb-3">
-                <label for="message-text" class="col-form-label"
-                  >Message:</label
-                >
-                <textarea class="form-control" id="message-text"></textarea>
+              <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Last name</label>
+                <input type="lastname" class="form-control" id="lastname" />
+                <small id="lastnameErr"></small>
               </div>
+              </div>
+              <div class="col-md-6">
+                <label for="inputAddress" class="form-label">Email Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="bayo@gmail.com"
+                />
+                <small id="emailErr"></small>
+              </div>
+              <div class="col-12">
+                <label for="inputAddress2" class="form-label">Password</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="password"
+                  placeholder=""
+                />
+                <small id="passwordErr"></small>
+              </div>
+              <div class="col-md-4">
+                <label for="inputState" class="form-label">Role</label>
+                <select id="inputState" class="form-select">
+                  <option>(Select Role)</option>
+                  <option>Agricultral Officer (AO)</option>
+                  <option>Farmer One (FO)</option>
+                  <option>Urban Farmer (UF)</option>
+                </select>
+                <small id="roleErr"></small>
+              </div>
+              <div class="col-md-2">
+                <label for="inputZip" class="form-label">Unique ID</label>
+                <input
+                  type="uniqueid"
+                  class="form-control"
+                  id="uniqueid"
+                  placeholder="Eg:AO-001"
+                />
+                <small id="uniqueErr"></small>
+              </div>
+              <div class="col-12"></div>
+              <div class="col form-group">
+                <label for="choice">Sex:</label>
+                <label class="form-check form-check-inline">
+                    <input class="form-check-input" id="male" type="radio" name="gender"
+                        value="male"><class="form-check-label">Male 
+                </label>
+                <label class="form-check form-check-inline">
+                    <input class="form-check-input" id="female" type="radio" name="gender" value="female">
+                        <class="form-check-label">Female
+                </label>
+                <small id="genderErr"></small>
+            </div>
             </form>
           </div>
           <div class="modal-footer">
