@@ -46,7 +46,7 @@ span1{
 
 
 #container-fluid{
-    background-color: orangered;
+    background-color: gray;
     padding-top: 10px;
     padding-bottom: 10px;
     height: 140px;
@@ -87,4 +87,7 @@ button{
     float: right;
 
     
+}
+table tbody{
+    font-weight: bold;
 }
