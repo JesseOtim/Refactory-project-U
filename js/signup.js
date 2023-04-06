@@ -11,9 +11,9 @@ const ValidateForm = (event) => {
   let lastNameError = document.getElementById("lnameErr");
   let emailError = document.getElementById("emailErr");
   let passwordError = document.getElementById("passwordErr");
-  let confirmPasswordError = document.getElementById("confirmpasswordError");
-  //
+  let confirmPasswordError = document.getElementById("confirmpasswordErr");
 
+  // First name Validation
   if (firstname.value == "") {
     firstname.style.border = "2px solid red";
     firstnameError.innerHTML = "Please the name cannot be empty";
@@ -40,9 +40,9 @@ const ValidateForm = (event) => {
   } else {
     firstname.style.border = "2px solid green";
     firstnameError.innerHTML = "";
-  }
-  // Last name
+  };
 
+  // Last name Validation
   if (lastName.value == "") {
     lastName.style.border = "2px solid red";
     lastNameError.innerHTML = "Please fill in the last name";
@@ -68,9 +68,9 @@ const ValidateForm = (event) => {
   } else {
     lastName.style.border = "2px solid green";
     lastNameError.innerHTML = "";
-  }
+  };
 
-  //Email Address
+  //Email Address Validation
   const emailregex =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (email.value == "") {
@@ -97,7 +97,7 @@ const ValidateForm = (event) => {
   } else {
     email.style.border = "2px solid green";
     emailError.textContent = "";
-  }
+  };
 
   // password validation
   const passwordregex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
@@ -162,6 +162,7 @@ async function newSignup(event) {
     let lastname = document.getElementById('lastname').value;
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
+    
 
     try {
         console.log(email)
