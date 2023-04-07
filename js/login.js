@@ -54,7 +54,8 @@ const ValidatemyForm = (event) => {
   }
 
   if (error > 0) {
-    event.stopImmediatePropagation();
+
+    
     event.preventDefault();
   }
 };
