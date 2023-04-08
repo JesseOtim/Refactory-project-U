@@ -166,7 +166,7 @@ async function newSignup(event) {
 
     try {
         console.log(email)
-        const response = await fetch(baseUrl + '/signup', {
+        const response = await fetch(baseUrl + 'user/signup', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -183,7 +183,7 @@ async function newSignup(event) {
         console.log(data,'>>>>>>>>>')
         if (data.status == 201) {
             // alert("successful sign up")
-            setTimeout(myFunction(), 9000);
+            setTimeout(myFunction, 9000);
             window.location = '../Auth/login.html'
         }
 

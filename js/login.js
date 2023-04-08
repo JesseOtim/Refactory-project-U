@@ -1,6 +1,7 @@
 const ValidatemyForm = (event) => {
   const email = document.getElementById("email");
   const password = document.getElementById("password");
+  
   let error = 0;
 
   //

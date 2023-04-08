@@ -12,7 +12,7 @@ const ValidatemyForm = () => {
   const roleValue = role.value;
 
   //
-  let firstnameError = document.getElementById("fnameErr");
+  let firstnameError = document.getElementById("firstnameErr");
   let lastnameError = document.getElementById("lastnameErr");
   let emailError = document.getElementById("emailErr");
   let passwordError = document.getElementById("passwordErr");
