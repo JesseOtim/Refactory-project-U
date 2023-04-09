@@ -1,0 +1,95 @@
+body{
+    font-family: Arial, sans-serif;
+}
+
+.logo {
+    color: darkgreen;
+    font-weight: bold;
+    font-size: 30px;
+   
+   
+ }
+
+ span {
+   color: orangered;
+  
+ }
+
+ /* #blob-background {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23F1C21B' d='M49.2,-62.2C62.3,-58.2,70.4,-41.9,69.2,-26.9C68,-12,57.5,1.6,49.2,12.6C41,23.6,35.1,31.9,27.3,32C19.5,32.1,9.8,24,-4.5,30.1C-18.7,36.3,-37.4,56.8,-43.3,56C-49.1,55.3,-42,33.3,-42.6,17.2C-43.2,1.1,-51.3,-9.1,-50.8,-18.4C-50.4,-27.6,-41.2,-35.9,-31.3,-40.9C-21.4,-46,-10.7,-47.8,3.7,-52.9C18,-57.9,36.1,-66.2,49.2,-62.2Z' transform='translate(100 100)' /%3E%3C/svg%3E");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+ } */
+
+ h2{
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+h5{
+    color: white;
+}
+
+span1{
+    color: blue;
+}
+
+.offcanvas-body ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+#container-fluid{
+    background-color: green;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 200px;
+}
+
+.card{
+    margin-top: 25px;
+    border-radius: 20px;
+    padding-bottom: 30px;
+}
+/* 
+#card1{
+    border-left-color: darkgreen;
+}
+
+#card2{
+    border-left-color: orangered;
+}
+
+#card3{
+border-left-color: blue;
+}
+
+#card4{
+    border-left-color: olive;
+} */
+
+#card5{
+    margin-top: 50px;
+    
+}
+
+h3{
+    margin-top: 30px;
+    font-weight: bold;
+
+}
+
+button{
+    float: right;
+
+    
+}
+table tbody{
+    font-weight: bold;
+}

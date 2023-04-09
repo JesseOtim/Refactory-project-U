@@ -172,6 +172,188 @@
       </div>
     </div>
     <!-- Chart Ends -->
+
+     <!-- Table Data -->
+     <div class="container-fluid">
+      <h3>Registered UrbanFarmers </h3>
+      <button
+        type="button"
+        class="btn btn-success"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+        data-bs-whatever="@fat"
+      >
+        + Add (UF)
+      </button>
+  
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">URBANFARMER REGISTRATION FORM</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form name="register" action="/register" method="POST">
+  
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">First name</label>
+                    <input type="firstname" class="form-control" id="firstname" />
+                    <small id="fnameErr"></small>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Last name</label>
+                    <input type="lastname" class="form-control" id="lastname" />
+                    <small id="lastnameErr"></small>
+                  </div>
+                
+  
+                  <div class="col-md-6">
+                    <label for="inputAddress2" class="form-label">NIN</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="NIN"
+                      placeholder=""
+                    />
+                    <small id="NINErr"></small>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputAddress2" class="form-label">Contacts</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="contacts"
+                      placeholder=""
+                    />
+                    <small id="contactsErr"></small>
+                  </div>
+  
+                  <div class="col-md-6">
+                    <label for="inputAddress2" class="form-label">Date of Birth</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="dob"
+                      placeholder=""
+                    />
+                    
+                    <small id="dobErr"></small>
+                  </div>
+  
+                  <div class="col-md-6">
+                    <label for="inputAddress2" class="form-label">Date of Registration</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="dor"
+                      placeholder=""
+                    />
+                    <small id="dorErr"></small>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <label for="inputState" class="form-label">Activities</label>
+                    <select id="inputState" class="form-select">
+                      <option>(Select Activities)</option>
+                      <option>Inspect</option>
+                      <option>Approve</option>
+                      <option>Register</option>
+                    </select>
+                    <small id="wardErr"></small>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <label for="inputState" class="form-label">Ward</label>
+                    <select id="inputState" class="form-select">
+                      <option>(Select Ward)</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+                    <small id="wardErr"></small>
+                  </div>
+  
+                  <div class="col-md-6">
+                    <label for="inputZip" class="form-label">Unique ID</label>
+                    <input
+                      type="uniqueid"
+                      class="form-control"
+                      id="uniqueid"
+                      placeholder="Eg:AO-001"
+                    />
+                    <small id="uniqueErr"></small>
+                  </div>
+                
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-success">Register</button>
+             </div>
+           </div>
+         </div>
+       </div>
+     
+  
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">N</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">NIN</th>
+            <th scope="col">Contact</th>
+            <th scope="col">Date of Birth</th>
+            <th scope="col">Date of Registration</th>
+            <th scope="col">Activities</th>
+            <th scope="col">Ward</th>
+  
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>CM6999962IF</td>
+            <td>0705554632</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td></td>
+            <td></td>
+          </tr>
+         
+          
+  
+        </tbody>
+      </table>
+    </div>
+  
+      <!-- Table Data ends -->
+  
     
 
     <script

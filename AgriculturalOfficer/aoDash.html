@@ -155,7 +155,7 @@
 
     <!-- Table Data -->
     <div class="container-fluid">
-    <h3>Registered FOs </h3>
+    <h3>Registered FarmerOnes </h3>
     <button
       type="button"
       class="btn btn-success"
@@ -163,7 +163,7 @@
       data-bs-target="#exampleModal"
       data-bs-whatever="@fat"
     >
-      + Add Client
+      + Add (F0)
     </button>
 
     <div
@@ -188,70 +188,120 @@
             <form name="register" action="/register" method="POST">
 
               <div class="row">
-              <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">First name</label>
-                <input type="firstname" class="form-control" id="firstname" />
-                <small id="fnameErr"></small>
+                <div class="col-md-6">
+                  <label for="inputEmail4" class="form-label">First name</label>
+                  <input type="firstname" class="form-control" id="firstname" />
+                  <small id="fnameErr"></small>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputPassword4" class="form-label">Last name</label>
+                  <input type="lastname" class="form-control" id="lastname" />
+                  <small id="lastnameErr"></small>
+                </div>
+              
+
+                <div class="col-md-6">
+                  <label for="inputAddress2" class="form-label">NIN</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="NIN"
+                    placeholder=""
+                  />
+                  <small id="NINErr"></small>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputAddress2" class="form-label">Phone number</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="phonenumber"
+                    placeholder=""
+                  />
+                  <small id="phonenumberErr"></small>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="inputAddress2" class="form-label">Date of Birth</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="dob"
+                    placeholder=""
+                  />
+                  
+                  <small id="dobErr"></small>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="inputAddress2" class="form-label">Date of Registration</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="dor"
+                    placeholder=""
+                  />
+                  <small id="dorErr"></small>
+                </div>
+                
+                <div class="col-md-6">
+                  <label for="inputAddress2" class="form-label">Period of stay</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="pos"
+                    placeholder=""
+                  />
+                  <small id="posErr"></small>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="inputState" class="form-label">Residence type</label>
+                  <select id="residencetype" class="form-select">
+                    <option>(Select)</option>
+                    <option>Permanent</option>
+                    <option>Temporary</option>
+                  
+                  </select>
+                  <small id="residencetypeErr"></small>
+                </div>
+                
+                <div class="col-md-6">
+                  <label for="inputState" class="form-label">Ward</label>
+                  <select id="Ward" class="form-select">
+                    <option>(Select Ward)</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+                  <small id="wardErr"></small>
+                </div>
+                
+                
+                <div class="col-md-6">
+                  <label for="inputState" class="form-label">Role</label>
+                  <select id="inputState" class="form-select">
+                    <option>(Select Role)</option>
+                    <option>Agricultral Officer (AO)</option>
+                    <option>Farmer One (FO)</option>
+                    <option>Urban Farmer (UF)</option>
+                  </select>
+                  <small id="roleErr"></small>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="inputZip" class="form-label">Unique ID</label>
+                  <input
+                    type="uniqueid"
+                    class="form-control"
+                    id="uniqueid"
+                    placeholder="Eg:AO-001"
+                  />
+                  <small id="uniqueErr"></small>
+                </div>
+          
               </div>
-              <div class="col-md-6">
-                <label for="inputPassword4" class="form-label">Last name</label>
-                <input type="lastname" class="form-control" id="lastname" />
-                <small id="lastnameErr"></small>
-              </div>
-              </div>
-              <div class="col-md-6">
-                <label for="inputAddress" class="form-label">Email Address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  placeholder="bayo@gmail.com"
-                />
-                <small id="emailErr"></small>
-              </div>
-              <div class="col-12">
-                <label for="inputAddress2" class="form-label">Password</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="password"
-                  placeholder=""
-                />
-                <small id="passwordErr"></small>
-              </div>
-              <div class="col-md-4">
-                <label for="inputState" class="form-label">Role</label>
-                <select id="inputState" class="form-select">
-                  <option>(Select Role)</option>
-                  <option>Agricultral Officer (AO)</option>
-                  <option>Farmer One (FO)</option>
-                  <option>Urban Farmer (UF)</option>
-                </select>
-                <small id="roleErr"></small>
-              </div>
-              <div class="col-md-2">
-                <label for="inputZip" class="form-label">Unique ID</label>
-                <input
-                  type="uniqueid"
-                  class="form-control"
-                  id="uniqueid"
-                  placeholder="Eg:AO-001"
-                />
-                <small id="uniqueErr"></small>
-              </div>
-              <div class="col-12"></div>
-              <div class="col form-group">
-                <label for="choice">Sex:</label>
-                <label class="form-check form-check-inline">
-                    <input class="form-check-input" id="male" type="radio" name="gender"
-                        value="male"><class="form-check-label">Male 
-                </label>
-                <label class="form-check form-check-inline">
-                    <input class="form-check-input" id="female" type="radio" name="gender" value="female">
-                        <class="form-check-label">Female
-                </label>
-                <small id="genderErr"></small>
-            </div>
             </form>
           </div>
           <div class="modal-footer">
@@ -262,7 +312,7 @@
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary">Send message</button>
+            <button type="button" class="btn btn-success">Register</button>
            </div>
          </div>
        </div>
