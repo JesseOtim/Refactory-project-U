@@ -25,7 +25,7 @@ span {
 }
 
 .menu {
-  float: left;
+  float: inline-start;
   height: 40px;
 }
 
@@ -38,7 +38,6 @@ ul li{
   margin-left: 70px;
   margin-top: 20px;
   font-size: 15px;
-
 }
 
 ul li a{
@@ -108,8 +107,6 @@ footer {
 	font-weight: bold;
   }
 
-
-  
   .card-container {
 	display: flex;
 	flex-wrap: wrap;

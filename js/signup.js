@@ -1,14 +1,14 @@
 const ValidateForm = (event) => {
-  const firstname = document.getElementById("fn");
-  const lastName = document.getElementById("lname");
+  const firstname = document.getElementById("firstname");
+  const lastName = document.getElementById("lastname");
   const email = document.getElementById("email");
   const password = document.getElementById("password");
   const confirmPassword = document.getElementById("confirmpassword");
 
   let error = 0;
   //
-  let firstnameError = document.getElementById("fnErr");
-  let lastNameError = document.getElementById("lnameErr");
+  let firstnameError = document.getElementById("firstnameErr");
+  let lastNameError = document.getElementById("lastnameErr");
   let emailError = document.getElementById("emailErr");
   let passwordError = document.getElementById("passwordErr");
   let confirmPasswordError = document.getElementById("confirmpasswordErr");
@@ -150,7 +150,7 @@ const ValidateForm = (event) => {
 
 };
 
-var baseUrl = 'http://localhost:4000/api/auth';
+var baseUrl = 'http://localhost:4000/api/auth/';
 
 document.getElementById('submitbutton').addEventListener('click', function(click) {
     newSignup(click);
@@ -166,7 +166,7 @@ async function newSignup(event) {
 
     try {
         console.log(email)
-        const response = await fetch(baseUrl + 'user/signup', {
+        const response = await fetch(baseUrl + 'signup', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -182,9 +182,8 @@ async function newSignup(event) {
         const data = await response.json()
         console.log(data,'>>>>>>>>>')
         if (data.status == 201) {
-            // alert("successful sign up")
-            setTimeout(myFunction, 9000);
-            window.location = '../Auth/login.html'
+            alert(data.message)
+            setTimeout(function(){location.href="/auth/login.html"} , 500);  
         }
 
     } catch (error) {

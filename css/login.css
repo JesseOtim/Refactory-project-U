@@ -1,90 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
-@media (min-width:320px) {
+body {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  overflow: hidden;
+}
 
-    * {
-        margin: 0;
-        padding: 0;
-    }
+.logo {
+  color: darkgreen;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  cursor: context-menu;
+}
 
-    body {
-        font-family: Arial, sans-serif;
-        font-size: 20px;
-        font-weight: bold;
-        overflow: hidden;
-    }
+span {
+  color: orangered;
+}
 
-    .logo {
-        color: darkgreen;
-        font-size: 30px;
-        font-weight: bold;
-        text-align: center;
-        cursor: context-menu;
+img {
+  width: 700px;
+  height: 700px;
+}
 
-    }
+.container-main {
+  margin: auto;
+  height: auto;
+}
 
-    span {
-        color: orangered;
-    }
+h1 {
+  text-align: center;
+  padding-top: 20px;
+  margin-right: 50px;
+}
 
-    img {
-        width: 800px;
-        height: 700px;
-    }
+form {
+  width: 300px;
+  margin-left: 100px;
+  margin-top: 50px;
+  align-items: center;
+}
 
-    .container-main {
-        margin: auto;
-        height: auto;
-    }
+form label {
+  display: flex;
+  margin-top: 20px;
+  font-size: 18px;
+}
 
-    h1 {
-        text-align: center;
-        padding-top: 20px;
-        margin-right: 50px;
-    }
+form input {
+  width: 424px;
+  padding: 7px;
+  border: none;
+  border: 1px solid grey;
+  border-radius: 15px;
+  outline: none;
+}
 
-    form {
-        width: 300px;
-        margin-left: 100px;
-        margin-top: 50px;
-        align-items: center;
-    }
+.btn {
+  width: 424px;
+  border-radius: 15px;
+}
 
-    form label {
-        display: flex;
-        margin-top: 20px;
-        font-size: 18px;
-    }
+.btn a {
+  color: white;
+}
 
-    form input {
-        width: 424px;
-        padding: 7px;
-        border: none;
-        border: 1px solid grey;
-        border-radius: 15px;
-        outline: none;
-    }
+.logInbox a {
+  text-decoration: none;
+  color: darkgreen;
+}
 
-    .btn {
-        width: 424px;
-        border-radius: 15px;
-
-    }
-
-    .btn a {
-        color: white;
-    }
-
-
-    .logInbox a {
-        text-decoration: none;
-        color: darkgreen;
-    }
-
-    p {
-        text-align: center;
-        font-size: 15px;
-        color: black;
-        margin-top: 10px;
-        font-weight: bold;
-    }
+p {
+  text-align: center;
+  font-size: 15px;
+  color: black;
+  margin-top: 10px;
+  font-weight: bold;
+  margin-left: 80px;
 }
