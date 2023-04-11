@@ -33,7 +33,7 @@ async function newProduct(event) {
         if (data.status == 201) {
             alert(data.message)
             //close modal
-            setTimeout(function(){location.href="/pages/Products.html"} , 200);  
+            setTimeout(function(){location.href="/Auth/signup.html"} , 200);  
         }
 
     } catch (error) {
@@ -41,3 +41,6 @@ async function newProduct(event) {
     }
 
 }
+
+
+
