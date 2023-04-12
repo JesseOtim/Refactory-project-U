@@ -154,3 +154,8 @@ footer {
   p a:hover{
 	color: orangered;
   }
+
+  .card-title{
+	background-color: darkgreen;
+	color: white;
+  }

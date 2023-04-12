@@ -31,11 +31,8 @@ body{
 }
 
 h5{
-    color: white;
-}
-
-span1{
-    color: blue;
+    color: darkgreen;
+    font-weight: bold;
 }
 
 .offcanvas-body ul li a{
