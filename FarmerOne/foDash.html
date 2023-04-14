@@ -89,17 +89,6 @@
                 </ul>
               </li> -->
             </ul>
-            <form class="d-flex mt-3" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
           </div>
         </div>
       </div>
@@ -208,13 +197,14 @@
               ></button>
             </div>
             <div class="modal-body">
-              <form name="register" action="/register" method="POST">
+              <form name="registration" action="/submit" onsubmit="return ValidatemyForm(event)"
+              method="POST">
   
                 <div class="row">
                   <div class="col-md-6">
                     <label for="inputEmail4" class="form-label">First name</label>
                     <input type="firstname" class="form-control" id="firstname" />
-                    <small id="fnameErr"></small>
+                    <small id="firstnameErr"></small>
                   </div>
                   <div class="col-md-6">
                     <label for="inputPassword4" class="form-label">Last name</label>
@@ -234,14 +224,14 @@
                     <small id="NINErr"></small>
                   </div>
                   <div class="col-md-6">
-                    <label for="inputAddress2" class="form-label">Contacts</label>
+                    <label for="inputAddress2" class="form-label">phonenumber</label>
                     <input
                       type="tel"
                       class="form-control"
                       id="phonenumber"
                       placeholder=""
                     />
-                    <small id="contactsErr"></small>
+                    <small id="phonenumberErr"></small>
                   </div>
   
                   <div class="col-md-6">
@@ -302,7 +292,8 @@
               >
                 Close
               </button>
-              <button type="button" class="btn btn-success">Register</button>
+              <!-- <button type="submit" class="btn btn-success">Register</button> -->
+              <input type="submit" class="btn btn-success"  value="Submit" id="submitbutton">
              </div>
            </div>
          </div>
@@ -312,13 +303,13 @@
   
       <!-- Table Data ends -->
   
-    
-
+      
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/foDash.js"></script>
     <script src="../js/lineChart.js"></script>
   </body>
 </html>
