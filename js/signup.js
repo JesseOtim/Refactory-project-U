@@ -182,7 +182,7 @@ async function newSignup(event) {
         const data = await response.json()
         console.log(data,'>>>>>>>>>')
         if (data.status == 201) {
-            alert(data.message)
+            // alert(data.message)
             setTimeout(function(){location.href="/auth/login.html"} , 500);  
         }
 
@@ -191,3 +191,12 @@ async function newSignup(event) {
     }
 
 }
+
+
+var submitBtn = document.getElementById('submitbutton');
+submitBtn.addEventListener('click', function() {
+  var toastEl = document.getElementById('liveToast');
+  //This bootstrap constructor shows or hides the toast
+  var toast = new bootstrap.Toast(toastEl);
+  toast.show();
+});

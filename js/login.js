@@ -92,7 +92,7 @@ async function newLogin(event) {
         console.log(data,'>>>>>>>>>')
         if (data.status == 200) {
             // alert(data.message)
-            setTimeout(function(){location.href="/pages/Products.html"} , 20000); 
+            setTimeout(function(){location.href="/pages/Products.html"} , 500); 
              
         }
 
@@ -105,6 +105,7 @@ async function newLogin(event) {
 var submitBtn = document.getElementById('submitbutton');
 submitBtn.addEventListener('click', function() {
   var toastEl = document.getElementById('liveToast');
+  //This bootstrap constructor shows or hides the toast
   var toast = new bootstrap.Toast(toastEl);
   toast.show();
 });
