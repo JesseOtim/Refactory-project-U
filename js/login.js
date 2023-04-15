@@ -91,8 +91,8 @@ async function newLogin(event) {
         const data = await response.json()
         console.log(data,'>>>>>>>>>')
         if (data.status == 200) {
-            alert(data.message)
-            setTimeout(function(){location.href="/pages/Products.html"} , 500); 
+            // alert(data.message)
+            setTimeout(function(){location.href="/pages/Products.html"} , 20000); 
              
         }
 
@@ -101,4 +101,14 @@ async function newLogin(event) {
     }
 
 }
+
+var submitBtn = document.getElementById('submitbutton');
+submitBtn.addEventListener('click', function() {
+  var toastEl = document.getElementById('liveToast');
+  var toast = new bootstrap.Toast(toastEl);
+  toast.show();
+});
+
+
+
 
