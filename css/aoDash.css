@@ -33,8 +33,12 @@ body{
 h5{
     color: darkgreen;
     font-size: 25px;
+    padding-left: 20px;
 }
 
+.offcanvas-body ul li{
+    padding-left: 20px;
+}
 
 .offcanvas-body ul li a{
     text-decoration: none;
@@ -44,6 +48,7 @@ h5{
 .offcanvas-body button{
     float: left;
     margin-top: 20px;
+    margin-left: 20px;
 }
 
 
@@ -89,6 +94,7 @@ h3{
 
 button{
     float: right;
+    margin-bottom: 40px;
 
     
 }

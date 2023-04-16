@@ -1,7 +1,7 @@
 const ValidatemyForm = (event) => {
   const email = document.getElementById("email");
   const password = document.getElementById("password");
-  
+
   let error = 0;
 
   //
@@ -55,61 +55,53 @@ const ValidatemyForm = (event) => {
   }
 
   if (error > 0) {
-
-    
     event.preventDefault();
   }
 };
 
+var baseUrl = "http://localhost:4000/api/auth/";
 
-
-var baseUrl = 'http://localhost:4000/api/auth/';
-
-document.getElementById('submitbutton').addEventListener('click', function(click) {
+document
+  .getElementById("submitbutton")
+  .addEventListener("click", function (click) {
     newLogin(click);
-});
+  });
 
 async function newLogin(event) {
-    event.preventDefault();
-    let email = document.getElementById('email').value;
-    let password = document.getElementById('password').value;
-    
+  event.preventDefault();
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
 
-    try {
-        console.log(email)
-        const response = await fetch(baseUrl + 'login', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            mode: 'cors',
-            body: JSON.stringify({
-                "email": email,
-                "password": password,
-            })
-        })
-        const data = await response.json()
-        console.log(data,'>>>>>>>>>')
-        if (data.status == 200) {
-            // alert(data.message)
-            setTimeout(function(){location.href="/pages/Products.html"} , 500); 
-             
-        }
-
-    } catch (error) {
-        console.log(error)
+  try {
+    console.log(email);
+    const response = await fetch(baseUrl + "login", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      mode: "cors",
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      }),
+    });
+    const data = await response.json();
+    console.log(data, ">>>>>>>>>");
+    if (data.status == 200) {
+      // alert(data.message)
+      setTimeout(function () {
+        location.href = "/pages/Products.html";
+      }, 500);
     }
-
+  } catch (error) {
+    console.log(error);
+  }
 }
 
-var submitBtn = document.getElementById('submitbutton');
-submitBtn.addEventListener('click', function() {
-  var toastEl = document.getElementById('liveToast');
+var submitBtn = document.getElementById("submitbutton");
+submitBtn.addEventListener("click", function () {
+  var toastEl = document.getElementById("liveToast");
   //This bootstrap constructor shows or hides the toast
   var toast = new bootstrap.Toast(toastEl);
   toast.show();
 });
-
-
-
-
