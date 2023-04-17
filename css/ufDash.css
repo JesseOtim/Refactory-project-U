@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .logo {
+    color: darkgreen;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  
+  span {
+    color: orangered;
+  }
+  
+  h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  
+  h5 {
+    color: darkgreen;
+    font-size: 25px;
+    padding-left: 20px;
+  }
+  
+  .offcanvas-body ul li {
+    padding-left: 20px;
+  }
+  
+  .offcanvas-body ul li a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .offcanvas-body button {
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  
+  #container-fluid {
+    background-color:olive;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 200px;
+  }
+  
+  .card {
+    margin-top: 25px;
+    border-radius: 20px;
+    padding-bottom: 30px;
+  }
+  
+  #card5 {
+    margin-top: 50px;
+  }
+  
+  h3 {
+    margin-top: 30px;
+    font-weight: bold;
+  }
+  
+  button {
+    margin-top: 10px;
+    margin-left: 622px;
+  }
+  
+  table tbody {
+    font-weight: bold;
+  }
+  
