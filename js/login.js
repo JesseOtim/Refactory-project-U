@@ -1,11 +1,10 @@
 const ValidatemyForm = (event) => {
+  event.preventDefault();
   const email = document.getElementById("email");
   const password = document.getElementById("password");
 
-  let error = 0;
-
   //
-  let emailError = document.getElementById("mailErr");
+  let emailError = document.getElementById("emailErr");
   let passwordError = document.getElementById("passwordErr");
 
   //email validation
@@ -31,7 +30,7 @@ const ValidatemyForm = (event) => {
   }
 
   //password validation
-  const passwordregex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+  const passwordregex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
 
   if (password.value == "") {
     password.style.border = "2px solid red";
@@ -54,9 +53,10 @@ const ValidatemyForm = (event) => {
     passwordError.innerHTML = "";
   }
 
-  if (error > 0) {
-    event.preventDefault();
-  }
+  // if (error > 0) {
+  //   // event.stopImmediatePropagation();
+  //   event.preventDefault();
+  // }
 };
 
 var baseUrl = "http://localhost:4000/api/auth/";
@@ -90,7 +90,7 @@ async function newLogin(event) {
     if (data.status == 200) {
       // alert(data.message)
       setTimeout(function () {
-        location.href = "/pages/Product.html";
+        location.href = "/pages/Products.html";
       }, 500);
     }
   } catch (error) {

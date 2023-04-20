@@ -1,4 +1,5 @@
 const ValidateForm = (event) => {
+
   const firstname = document.getElementById("firstname");
   const lastName = document.getElementById("lastname");
   const email = document.getElementById("email");
@@ -100,7 +101,7 @@ const ValidateForm = (event) => {
   };
 
   // password validation
-  const passwordregex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+  const passwordregex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
 
   if (password.value == "") {
     password.style.border = "2px solid red";
@@ -143,8 +144,9 @@ const ValidateForm = (event) => {
   }
 
   if (error > 0) {
-    event.stopImmediatePropagation();
     event.preventDefault();
+    event.stopImmediatePropagation();
+ 
   }
 
 
