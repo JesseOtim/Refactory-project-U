@@ -90,7 +90,7 @@ async function newLogin(event) {
     if (data.status == 200) {
       // alert(data.message)
       setTimeout(function () {
-        location.href = "/pages/Products.html";
+        location.href = "/pages/Product.html";
       }, 500);
     }
   } catch (error) {

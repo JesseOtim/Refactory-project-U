@@ -1,6 +1,6 @@
 body {
   width: 100%;
-  height: 400px;
+  height: 800px;
   font-family: Arial, sans-serif;
   overflow-x: hidden;
 }
@@ -86,6 +86,7 @@ h1 {
 }
 
 .header {
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -114,94 +115,34 @@ p {
   font-size: 18px;
 }
 
-/* .content-header {
-   font-size: 50px;
-   font-weight: bold;
-   justify-content: center;
-   align-content: center;
- }
- 
- span1 {
-   color: darkgreen;
- }
- 
- h3 {
-   margin-top: 50px;
- }
- 
- .par {
-   font-size: 20px;
- }
- 
- .card {
-   float: left;
-   margin-left: 30px;
-   margin-top: 25px;
-   border-top: 2px solid orangered;
-   border-bottom: 2px solid darkgreen;
- }
- 
- .card img {
-   border-bottom-right-radius: 50%;
- }
- 
- .card-title {
-   font-size: 25px;
-   font-weight: bold;
-   color: orangered;
- }
- 
- .card-text {
-   font-size: 15px;
-   font-weight: bold;
- }
- 
- .card button {
-   font-size: 15px;
-   font-weight: bold;
-   border-radius: 50px;
- } */
-
-/* .footer {
-   color: black;
-   height: 100px;
-   margin-top: 20%;
-   border-top: 2px solid orangered;
- }
- 
- .footer-logo {
-   padding-top: 15px;
-   font-size: 30px;
-   color: darkgreen;
-   text-align: justify;
- }
- 
- .footer-menu ul li {
-   margin-left: 70px;
-   margin-top: 10px;
-   font-size: 15px;
- }
- 
- .footer menu ul li a {
-   text-decoration: none;
-   color: black;
-   font-family: cursive;
-   font-weight: bold;
-   transition: 0.4s ease;
- }
- 
- .footer-menu ul li a:hover {
-   color: darkgreen;
- }
-  */
-
-
-.icons {
-  float: right;
+.footer {
+  margin-top: 15px;
+  border-top: 15px;
+  background: olivedrab;
 }
 
-.icons i {
+h4 {
+  color: orange;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 50px;
+}
+
+.header-title {
+  padding-left: 40px;
+}
+
+#phone {
+  padding-left: 40px;
+}
+
+.icons a {
+  text-decoration:none;
+}
+
+.icons a i {
   padding-left: 20px;
   margin-top: 40px;
   cursor: pointer;
 }
+
