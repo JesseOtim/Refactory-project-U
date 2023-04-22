@@ -1,4 +1,6 @@
 const Validateform = (event) => {
+
+  event.preventDefault();
   let firstname = document.getElementById("firstname");
   let lastname = document.getElementById("lastname");
   let phonenumber = document.getElementById("phonenumber");
@@ -93,10 +95,10 @@ const Validateform = (event) => {
     roleError.innerHTML = "";
   }
 
-  if (error > 0) {
-    stopImmediatePropagation();
-    preventDefault();
-  }
+  // if (error > 0) {
+  //   event.stopImmediatePropagation();
+ 
+  // }
 };
 
 var baseUrl = "http://localhost:4000/api/auth/";
@@ -119,7 +121,7 @@ async function addFarmer(event) {
   let role = document.getElementById("role").value;
 
   try {
-    const response = await fetch(baseUrl + "farmer/", {
+    const response = await fetch(baseUrl + 'farmer/', {
       method: "POST",
       headers: {
         "content-type": "application/json",
