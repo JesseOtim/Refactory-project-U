@@ -115,6 +115,8 @@ async function addFarmer(event) {
   let dob = document.getElementById("dob").value;
   let dateofregistration = document.getElementById("dor").value;
   let periodofstay = document.getElementById("pos").value;
+  let ward = document.getElementById("ward").value;
+  let role = document.getElementById("role").value;
 
   try {
     const response = await fetch(baseUrl + "farmer/", {
@@ -127,10 +129,12 @@ async function addFarmer(event) {
         firstname: firstname,
         lastname: lastname,
         NIN: NIN,
-        dob: dob,
+        DOB: dob,
         dateofregistration: dateofregistration,
         periodofstay: periodofstay,
-        phonenumer: phonenumber,
+        Phonenumber: phonenumber,
+        ward: ward,
+        role: role,
       }),
     });
     const data = await response.json();

@@ -1,5 +1,5 @@
 const ValidateForm = (event) => {
-
+  event.preventDefault();
   const firstname = document.getElementById("firstname");
   const lastName = document.getElementById("lastname");
   const email = document.getElementById("email");
@@ -143,11 +143,9 @@ const ValidateForm = (event) => {
     confirmPasswordError.innerHTML = "";
   }
 
-  if (error > 0) {
-    event.preventDefault();
-    event.stopImmediatePropagation();
- 
-  }
+  // if(error > 0){
+  //     event.stopImmediatePropagation();
+  // }
 
 
 };

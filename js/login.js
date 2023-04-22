@@ -3,7 +3,7 @@ const ValidatemyForm = (event) => {
   const email = document.getElementById("email");
   const password = document.getElementById("password");
 
-  //
+  //errors
   let emailError = document.getElementById("emailErr");
   let passwordError = document.getElementById("passwordErr");
 
@@ -54,8 +54,8 @@ const ValidatemyForm = (event) => {
   }
 
   // if (error > 0) {
-  //   // event.stopImmediatePropagation();
-  //   event.preventDefault();
+  //   event.stopImmediatePropagation();
+    
   // }
 };
 
