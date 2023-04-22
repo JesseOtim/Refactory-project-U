@@ -193,7 +193,7 @@
               ></button>
             </div>
             <div class="modal-body">
-              <form name="register" action="/register" method="POST">
+              <form name="aoDash" action="" onsubmit="return Validateform(event);" method="POST">
                 <div class="row">
                   <div class="col-md-6">
                     <label for="inputEmail4" class="form-label"
@@ -204,7 +204,7 @@
                       class="form-control"
                       id="firstname"
                     />
-                    <small id="fnameErr"></small>
+                    <small id="firstnameErr"></small>
                   </div>
                   <div class="col-md-6">
                     <label for="inputPassword4" class="form-label"
@@ -322,7 +322,8 @@
               >
                 Close
               </button>
-              <button type="button" class="btn btn-success">Register</button>
+              <!-- <button type="submit" class="btn btn-success" id="submitbutton">Register</button> -->
+              <input id="submitbutton" type="submit" value="submit" class="btn btn-success" >
             </div>
           </div>
         </div>
@@ -336,6 +337,7 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/aoDash.js"></script>
     <script src="../js/Chart.js"></script>
   </body>
 </html>
