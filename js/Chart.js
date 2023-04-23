@@ -6,9 +6,9 @@ var myChart = new Chart(ctx, {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
       {
-        label: "Monthly Earnings",
+        label: "Monthly Sales",
         data: [1200, 800, 1500, 1100, 1900, 1400, 950],
-        backgroundColor: "rgba(50,125,50,1)",
+        backgroundColor: "rgba(500,5,50,1)",
         borderColor: "rgba(50,110,50,0.2)",
         borderWidth: 1,
       },

@@ -43,6 +43,7 @@ body {
   
   #container-fluid {
     background-color:olive;
+    background-image: url(../images/megan-thomas-carrots-unsplash.jpg);
     padding-top: 10px;
     padding-bottom: 10px;
     height: 200px;

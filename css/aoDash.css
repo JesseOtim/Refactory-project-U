@@ -50,6 +50,7 @@ h5 {
 
 #container-fluid {
   background-color: goldenrod;
+  background-image: url(../images/CORN.jpg);
   padding-top: 10px;
   padding-bottom: 10px;
   height: 200px;
