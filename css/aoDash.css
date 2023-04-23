@@ -56,6 +56,7 @@ h5 {
 }
 
 .card {
+  margin-left: 50px;
   margin-top: 25px;
   padding-bottom: 30px;
 }
@@ -80,14 +81,19 @@ border-left-color: blue;
   margin-top: 50px;
 }
 
+.card-text{
+  font-size: large;
+}
+
 h3 {
   margin-top: 30px;
   font-weight: bold;
 }
 
-button {
+#button{
   margin-top: 10px;
-  margin-left: 622px;
+  float: right;
+  margin-right: 13px;
 }
 
 table tbody {

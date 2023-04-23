@@ -42,7 +42,7 @@
         </button>
 
         <div
-          class="offcanvas offcanvas-start"
+          class="offcanvas offcanvas-end"
           tabindex="-1"
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
@@ -117,18 +117,19 @@
       data-bs-toggle="modal"
       data-bs-target="#exampleModal"
       data-bs-whatever="@fat"
+      id="button"
     >
       <i class="bi bi-plus-lg"></i> User
     </button>
 
-    <h2>AgriculturalOfficer Dashboard</h2>
+    <h2>A-Officer Dashboard</h2>
     <div class="container-fluid" id="container-fluid">
       <div class="row">
         <div class="col">
           <div class="card" style="width: 18rem" id="card1">
             <div class="card-body">
-              <h5 class="card-title">Total Sales (monthly)</h5>
-              <p class="card-text">UGX 700,000++</p>
+              <h5 class="card-title"><i class="bi bi-geo-alt" style="color: darkgreen; font-size: 40px;"></i> Total Sales</h5>
+              <p class="card-text">UGX: 11,000,000++</p>
             </div>
           </div>
         </div>
@@ -136,8 +137,8 @@
         <div class="col">
           <div class="card" style="width: 18rem" id="card3">
             <div class="card-body">
-              <h5 class="card-title">EARNINGS(monthly)</h5>
-              <p class="card-text">UGX 1,OOO,OOO++</p>
+              <h5 class="card-title"><i class="bi bi-piggy-bank-fill" style="color:red; font-size: 40px;"></i>  Monthly Sales</h5>
+              <p class="card-text">UGX: 8OO,OOO++</p>
             </div>
           </div>
         </div>
@@ -145,8 +146,8 @@
         <div class="col">
           <div class="card" style="width: 18rem" id="card4">
             <div class="card-body">
-              <h5 class="card-title">EARNINGS(monthly)</h5>
-              <p class="card-text">UGX 200,000</p>
+              <h5 class="card-title"><i class="bi bi-wallet" style="color:orangered; font-size: 40px;"></i> Expenses</h5>
+              <p class="card-text">UGX: 200,000</p>
             </div>
           </div>
         </div>
@@ -193,7 +194,7 @@
               ></button>
             </div>
             <div class="modal-body">
-              <form name="aoDash" action="" onsubmit="return Validateform(event);" method="POST">
+              <form name="aoDash" action="Users.html" onsubmit="return Validateform(event);" method="POST">
                 <div class="row">
                   <div class="col-md-6">
                     <label for="inputEmail4" class="form-label"

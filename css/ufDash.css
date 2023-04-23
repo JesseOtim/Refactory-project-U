@@ -49,13 +49,17 @@ body {
   }
   
   .card {
+    margin-left: 50px;
     margin-top: 25px;
-    border-radius: 20px;
     padding-bottom: 30px;
   }
   
   #card5 {
     margin-top: 50px;
+  }
+
+  .card-text{
+    font-size: large;
   }
   
   h3 {
@@ -63,11 +67,19 @@ body {
     font-weight: bold;
   }
   
-  button {
+  /* button {
     margin-top: 10px;
     margin-left: 622px;
+  } */
+
+  #button{
+    margin-top: 10px;
+    float: right;
+    margin-right: 13px;
   }
-  
+ 
+
+
   table tbody {
     font-weight: bold;
   }
