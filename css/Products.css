@@ -134,6 +134,8 @@ h1 {
 }
 
 button {
+  /* margin-left: 622px; */
+  float: right;
   margin-top: 30px;
-  margin-left: 622px;
+  margin-right: 10px;
 }
