@@ -2,10 +2,10 @@
 var baseUrl = 'http://localhost:4000/api/auth/';
 
 document.getElementById('submitbutton').addEventListener('click', function(click) {
-    newProduct(click);
+    addProduct(click);
 });
 
-async function newProduct(event) {
+async function addProduct(event) {
     event.preventDefault();
     let Name= document.getElementById('name').value;
     let price = document.getElementById('price').value;
@@ -44,22 +44,22 @@ async function newProduct(event) {
 
 }
 
-// const form = document.getElementById('register-form');
-// const uploadInput = document.getElementById('uploadimage');
+const form = document.getElementById('register-form');
+const uploadInput = document.getElementById('uploadimage');
 
-// uploadInput.addEventListener('change', async () => {
-//   const file = uploadInput.files[0];
+uploadInput.addEventListener('change', async () => {
+  const file = uploadInput.files[0];
 
-//   // Upload the file to Cloudinary
-//   const { secure_url } = await cloudinary.uploader.upload(file);
+  // Upload the file to Cloudinary
+  const { secure_url } = await cloudinary.uploader.upload(file);
 
-//   // Set the image URL in a hidden input field so it's included in the form data
-//   const imageUrlInput = document.createElement('input');
-//   imageUrlInput.type = 'hidden';
-//   imageUrlInput.name = 'imageUrl';
-//   imageUrlInput.value = secure_url;
-//   form.appendChild(imageUrlInput);
-// });
+  // Set the image URL in a hidden input field so it's included in the form data
+  const imageUrlInput = document.createElement('input');
+  imageUrlInput.type = 'hidden';
+  imageUrlInput.name = 'imageUrl';
+  imageUrlInput.value = secure_url;
+  form.appendChild(imageUrlInput);
+});
 
 
 

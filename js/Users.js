@@ -1,178 +1,138 @@
-// // Define the base URL for the API
-// const baseUrl = "http://localhost:4000/api/auth/";
-
-// // Retrieve the UserList element from the HTML page
-// const userList = document.getElementById("UserList");
-
-// // Make a GET request to the server to retrieve the list of farmers
-// fetch(baseUrl + "farmers/")
-//   .then(response => {
-//     // Check if the response is successful
-//     if (response.ok) {
-//       // Parse the response as JSON
-//       return response.json();
-//     } else {
-//       throw new Error("Error retrieving data from server.");
-//     }
-//   })
-//   .then(data => {
-//     // Loop through the list of farmers and create a new row in the table for each farmer
-//     for (let farmer of data) {
-//       // Create a new row element
-//       const row = document.createElement("tr");
-
-//       // Add the farmer's data to the row
-//       row.innerHTML = `
-//         <td>${farmer.firstname} ${farmer.lastname}</td>
-//         <td>${farmer.phonenumber}</td>
-//         <td>${farmer.NIN}</td>
-//         <td>${farmer.dob}</td>
-//         <td>${farmer.dateofregistration}</td>
-//         <td>${farmer.periodofstay}</td>
-//         <td>${farmer.ward}</td>
-//         <td>${farmer.role}</td>
-//       `;
-
-//       // Add the row to the UserList table
-//       userList.appendChild(row);
-//     }
-//   })
-//   .catch(error => {
-//     console.log(error);
-//   });
 
 
 
- 
-const tableBody = document.getElementById('table-body');
-  const data = [];
-  
-tableBody.innerHTML = ''; // Clear any existing rows
-data.forEach(farmer => {
-  const row = document.createElement('tr');
+window.onload = function () {
+  let firstname = localStorage.getItem('firstname');
+  let lastname = localStorage.getItem('lastname');
+  let phonenumber = localStorage.getItem('phonenumber');
+  let NIN = localStorage.getItem('NIN');
+  let dob = localStorage.getItem('dob');
+  let dateofregistration = localStorage.getItem('dateofregistration');
+  let periodofstay = localStorage.getItem('periodofstay');
+  let ward = localStorage.getItem('ward');
+  let role = localStorage.getItem('role');
 
-  const firstnameCell = document.createElement('td');
-  firstnameCell.textContent = farmer.firstname;
-  row.appendChild(firstnameCell);
+  // populate the table with the farmer data
+  document.getElementById('firstname').textContent = firstname;
+  document.getElementById('lastname').textContent = lastname;
+  document.getElementById('phonenumber').textContent = phonenumber;
+  document.getElementById('NIN').textContent = NIN;
+  document.getElementById('dob').textContent = dob;
+  document.getElementById('dateofregistration').textContent = dateofregistration;
+  document.getElementById('periodofstay').textContent = periodofstay;
+  document.getElementById('ward').textContent = ward;
+  document.getElementById('role').textContent = role;
 
-  const lastnameCell = document.createElement('td');
-  lastnameCell.textContent = farmer.lastname;
-  row.appendChild(lastnameCell);
+  // clear the local storage after use
+  // localStorage.clear();
+}
 
-  const phoneNumberCell = document.createElement('td');
-  phoneNumberCell.textContent = farmer.phonenumber;
-  row.appendChild(phoneNumberCell);
+// window.onload = function () {
+//   let firstname = localStorage.getItem('firstname');
+//   let lastname = localStorage.getItem('lastname');
+//   let phonenumber = localStorage.getItem('phonenumber');
+//   let NIN = localStorage.getItem('NIN');
+//   let dob = localStorage.getItem('dob');
+//   let dateofregistration = localStorage.getItem('dateofregistration');
+//   let periodofstay = localStorage.getItem('periodofstay');
+//   let ward = localStorage.getItem('ward');
+//   let role = localStorage.getItem('role');
 
-  const NINCell = document.createElement('td');
-  NINCell.textContent = farmer.NIN;
-  row.appendChild(NINCell);
+//   // populate the table with the farmer data
+//   document.getElementById('firstname').textContent = firstname;
+//   document.getElementById('lastname').textContent = lastname;
+//   document.getElementById('phonenumber').textContent = phonenumber;
+//   document.getElementById('NIN').textContent = NIN;
+//   document.getElementById('dob').textContent = dob;
+//   document.getElementById('dateofregistration').textContent = dateofregistration;
+//   document.getElementById('periodofstay').textContent = periodofstay;
+//   document.getElementById('ward').textContent = ward;
+//   document.getElementById('role').textContent = role;
 
-  const dobCell = document.createElement('td');
-  dobCell.textContent = farmer.dob;
-  row.appendChild(dobCell);
+//   // create a new row for the new farmer data
+//   let newFirstname = localStorage.getItem('new-firstname');
+//   let newLastname = localStorage.getItem('new-lastname');
+//   let newPhonenumber = localStorage.getItem('new-phonenumber');
+//   let newNIN = localStorage.getItem('new-NIN');
+//   let newDOB = localStorage.getItem('new-dob');
+//   let newDateofregistration = localStorage.getItem('new-dateofregistration');
+//   let newPeriodofstay = localStorage.getItem('new-periodofstay');
+//   let newWard = localStorage.getItem('new-ward');
+//   let newRole = localStorage.getItem('new-role');
 
-  const dorCell = document.createElement('td');
-  dorCell.textContent = farmer.dateofregistration;
-  row.appendChild(dorCell);
-
-  const posCell = document.createElement('td');
-  posCell.textContent = farmer.periodofstay;
-  row.appendChild(posCell);
-
-  const wardCell = document.createElement('td');
-  wardCell.textContent = farmer.ward;
-  row.appendChild(wardCell);
-
-  const roleCell = document.createElement('td');
-  roleCell.textContent = farmer.role;
-  row.appendChild(roleCell);
-
-  tableBody.appendChild(row);
-});
-
-
-// const tableBody = document.getElementById('table-body');
-// const data = [];
-
-// // Get form element and add submit event listener
-// const form = document.getElementById('my-form');
-// form.addEventListener('submit', function(event) {
-//   event.preventDefault(); // prevent default form submission behavior
-
-//   // Get values from form inputs
-//   const firstname = document.getElementById('firstname').value;
-//   const lastname = document.getElementById('lastname').value;
-//   const phonenumber = document.getElementById('phonenumber').value;
-//   const NIN = document.getElementById('NIN').value;
-//   const dob = document.getElementById('dob').value;
-//   const dateofregistration = document.getElementById('dateofregistration').value;
-//   const periodofstay = document.getElementById('periodofstay').value;
-//   const ward = document.getElementById('ward').value;
-//   const role = document.getElementById('role').value;
-
-//   // Create new object with form values
-//   const newFarmer = {
-//     firstname,
-//     lastname,
-//     phonenumber,
-//     NIN,
-//     dob,
-//     dateofregistration,
-//     periodofstay,
-//     ward,
-//     role
-//   };
-
-//   // Add new object to data array
-//   data.push(newFarmer);
-
-//   // Render updated data in user list
-//   renderUserList();
-// });
-
-// function renderUserList() {
-//   tableBody.innerHTML = ''; // Clear any existing rows
-//   data.forEach(farmer => {
-//     const row = document.createElement('tr');
-
-//     const firstnameCell = document.createElement('td');
-//     firstnameCell.textContent = farmer.firstname;
-//     row.appendChild(firstnameCell);
-
-//     const lastnameCell = document.createElement('td');
-//     lastnameCell.textContent = farmer.lastname;
-//     row.appendChild(lastnameCell);
-
-//     const phoneNumberCell = document.createElement('td');
-//     phoneNumberCell.textContent = farmer.phonenumber;
-//     row.appendChild(phoneNumberCell);
-
-//     const NINCell = document.createElement('td');
-//     NINCell.textContent = farmer.NIN;
-//     row.appendChild(NINCell);
-
-//     const dobCell = document.createElement('td');
-//     dobCell.textContent = farmer.dob;
-//     row.appendChild(dobCell);
-
-//     const dorCell = document.createElement('td');
-//     dorCell.textContent = farmer.dateofregistration;
-//     row.appendChild(dorCell);
-
-//     const posCell = document.createElement('td');
-//     posCell.textContent = farmer.periodofstay;
-//     row.appendChild(posCell);
-
-//     const wardCell = document.createElement('td');
-//     wardCell.textContent = farmer.ward;
-//     row.appendChild(wardCell);
-
-//     const roleCell = document.createElement('td');
-//     roleCell.textContent = farmer.role;
-//     row.appendChild(roleCell);
-
-//     tableBody.appendChild(row);
-//   });
+//   let newFarmerRow = document.getElementById('new-farmer-row');
+//   let newFirstnameCell = document.createElement('td');
+//   let newLastnameCell = document.createElement('td');
+//   let newPhonenumberCell = document.createElement('td');
+//   let newNINCell = document.createElement('td');
+//   let newDOBCell = document.createElement('td');
+//   let newDateofregistrationCell = document.createElement('td');
+//   let newPeriodofstayCell = document.createElement('td');
+//   let newWardCell = document.createElement('td');
+//   let newRoleCell = document.createElement('new-role');
 // }
 
+// window.onload = function () {
+//   let firstname = localStorage.getItem('firstname');
+//   let lastname = localStorage.getItem('lastname');
+//   let phonenumber = localStorage.getItem('phonenumber');
+//   let NIN = localStorage.getItem('NIN');
+//   let dob = localStorage.getItem('dob');
+//   let dateofregistration = localStorage.getItem('dateofregistration');
+//   let periodofstay = localStorage.getItem('periodofstay');
+//   let ward = localStorage.getItem('ward');
+//   let role = localStorage.getItem('role');
+
+//   // populate the table with the farmer data
+//   document.getElementById('firstname').textContent = firstname;
+//   document.getElementById('lastname').textContent = lastname;
+//   document.getElementById('phonenumber').textContent = phonenumber;
+//   document.getElementById('NIN').textContent = NIN;
+//   document.getElementById('dob').textContent = dob;
+//   document.getElementById('dateofregistration').textContent = dateofregistration;
+//   document.getElementById('periodofstay').textContent = periodofstay;
+//   document.getElementById('ward').textContent = ward;
+//   document.getElementById('role').textContent = role;
+
+//   // create a new row for the new farmer data
+//   let newFirstname = localStorage.getItem('new-firstname');
+//   let newLastname = localStorage.getItem('new-lastname');
+//   let newPhonenumber = localStorage.getItem('new-phonenumber');
+//   let newNIN = localStorage.getItem('new-NIN');
+//   let newDOB = localStorage.getItem('new-dob');
+//   let newDateofregistration = localStorage.getItem('new-dateofregistration');
+//   let newPeriodofstay = localStorage.getItem('new-periodofstay');
+//   let newWard = localStorage.getItem('new-ward');
+//   let newRole = localStorage.getItem('new-role');
+
+//   let newFarmerRow = document.createElement('tr');
+//   let newFirstnameCell = document.createElement('td');
+//   newFirstnameCell.textContent = newFirstname;
+//   let newLastnameCell = document.createElement('td');
+//   newLastnameCell.textContent = newLastname;
+//   let newPhonenumberCell = document.createElement('td');
+//   newPhonenumberCell.textContent = newPhonenumber;
+//   let newNINCell = document.createElement('td');
+//   newNINCell.textContent = newNIN;
+//   let newDOBCell = document.createElement('td');
+//   newDOBCell.textContent = newDOB;
+//   let newDateofregistrationCell = document.createElement('td');
+//   newDateofregistrationCell.textContent = newDateofregistration;
+//   let newPeriodofstayCell = document.createElement('td');
+//   newPeriodofstayCell.textContent = newPeriodofstay;
+//   let newWardCell = document.createElement('td');
+//   newWardCell.textContent = newWard;
+//   let newRoleCell = document.createElement('td');
+//   newRoleCell.textContent = newRole;
+
+//   newFarmerRow.appendChild(newFirstnameCell);
+//   newFarmerRow.appendChild(newLastnameCell);
+//   newFarmerRow.appendChild(newPhonenumberCell);
+//   newFarmerRow.appendChild(newNINCell);
+//   newFarmerRow.appendChild(newDOBCell);
+//   newFarmerRow.appendChild(newDateofregistrationCell);
+//   newFarmerRow.appendChild(newPeriodofstayCell);
+//   newFarmerRow.appendChild(newWardCell);
+//   newFarmerRow.appendChild(newRoleCell);
+// }
 

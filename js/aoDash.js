@@ -128,26 +128,47 @@ async function addFarmer(event) {
       },
       mode: "cors",
       body: JSON.stringify({
-        firstname: firstname,
-        lastname: lastname,
-        NIN: NIN,
-        DOB: dob,
-        dateofregistration: dateofregistration,
-        periodofstay: periodofstay,
-        Phonenumber: phonenumber,
-        ward: ward,
-        role: role,
+        "firstname": firstname,
+        "lastname": lastname,
+        "NIN": NIN,
+        "DOB": dob,
+        "dateofregistration": dateofregistration,
+        "periodofstay": periodofstay,
+        "Phonenumber": phonenumber,
+        "ward": ward,
+        "role": role,
       }),
     });
     const data = await response.json();
     // console.log(data, ">>>>>>>>>");
-    if (data.status == 201) {
-      // alert(data.message)
-      setTimeout(function () {
-        location.href = "/pages/Users.html";
-      }, 500);
-    }
+         if (data.status == 201) {
+          // alert(data.message)
+          setTimeout(function () {
+            // store the farmer data in local storage
+            localStorage.setItem('firstname', firstname);
+            localStorage.setItem('lastname', lastname);
+            localStorage.setItem('phonenumber', phonenumber);
+            localStorage.setItem('NIN', NIN);
+            localStorage.setItem('dob', dob);
+            localStorage.setItem('dateofregistration', dateofregistration);
+            localStorage.setItem('periodofstay', periodofstay);
+            localStorage.setItem('ward', ward);
+            localStorage.setItem('role', role);
+            
+            location.href = "/pages/Users.html";
+          }, 500);
+        }
+        ;
   } catch (error) {
     console.log(error);
   }
 }
+
+var submitBtn = document.getElementById("submitbutton");
+submitBtn.addEventListener("click", function () {
+  var toastEl = document.getElementById("liveToast");
+  //This bootstrap constructor shows or hides the toast
+  var toast = new bootstrap.Toast(toastEl);
+  toast.show();
+});
+
