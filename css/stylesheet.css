@@ -118,7 +118,8 @@ p {
 .footer {
   margin-top: 15px;
   border-top: 15px;
-  background: olivedrab;
+  background:black;
+  color: white;
 }
 
 h4 {

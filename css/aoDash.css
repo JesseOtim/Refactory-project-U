@@ -61,22 +61,6 @@ h5 {
   margin-top: 25px;
   padding-bottom: 30px;
 }
-/* 
-#card1{
-    border-left-color: darkgreen;
-}
-
-#card2{
-    border-left-color: orangered;
-}
-
-#card3{
-border-left-color: blue;
-}
-
-#card4{
-    border-left-color: olive;
-} */
 
 #card5 {
   margin-top: 50px;
@@ -95,6 +79,12 @@ h3 {
   margin-top: 10px;
   float: right;
   margin-right: 13px;
+}
+
+.form-label{
+  font-size: 18px;
+  padding-top: 5px;
+
 }
 
 table tbody {
