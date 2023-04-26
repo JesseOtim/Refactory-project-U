@@ -114,16 +114,26 @@ p {
 .container p {
   font-size: 18px;
 }
-
+/* 
 .footer {
   margin-top: 15px;
   border-top: 15px;
   background:black;
   color: white;
+} */
+
+#farm{
+  margin-top: 20px;
+  background-color: black;
+  color: white;
+}
+
+.farm{
+  color: darkgreen;
 }
 
 h4 {
-  color: orange;
+  color: orangered;
   font-size: 18px;
   font-weight: bold;
   padding-top: 50px;
@@ -145,5 +155,14 @@ h4 {
   padding-left: 20px;
   margin-top: 40px;
   cursor: pointer;
+}
+
+ol li {
+  margin-top: 15px; 
+  cursor: pointer;
+}
+
+ol li:hover{
+ color: blue;
 }
 
