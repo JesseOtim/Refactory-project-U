@@ -22,7 +22,7 @@ const ValidateForm = (event) => {
     firstnameError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++;
-    return false;
+    
   } else if (firstname.value.length < 5) {
     firstname.style.border = "2px solid red";
     firstnameError.innerHTML =
@@ -30,7 +30,7 @@ const ValidateForm = (event) => {
     firstnameError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++;
-    return false;
+    
   } else if (firstname.value.length > 50) {
     firstname.style.border = "2px solid red";
     firstnameError.innerHTML =
@@ -38,7 +38,7 @@ const ValidateForm = (event) => {
     firstnameError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++;
-    return false;
+    
   } else {
     firstname.style.border = "2px solid green";
     firstnameError.innerHTML = "";
@@ -51,14 +51,14 @@ const ValidateForm = (event) => {
     lastNameError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++;
-    return false;
+    
   } else if (lastName.value.length < 5) {
     lastName.style.border = "2px solid red";
     lastNameError.innerHTML = "Please the last name must be atleast 5 letters";
     lastNameError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++;
-    return false;
+    
   } else if (lastName.value.length > 50) {
     lastName.style.border = "2px solid red";
     lastNameError.innerHTML =
@@ -66,7 +66,7 @@ const ValidateForm = (event) => {
     lastNameError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++;
-    return false;
+    
   } else {
     lastName.style.border = "2px solid green";
     lastNameError.innerHTML = "";
@@ -81,21 +81,21 @@ const ValidateForm = (event) => {
     emailError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++;
-    return false;
+    
   } else if (!email.value.match(emailregex)) {
     email.style.border = "2px solid red";
     emailError.textContent = "Please put in a correct email address";
     emailError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++;
-    return false;
+    
   } else if (email.value.length < 20) {
     email.style.border = "2px solid red";
     emailError.textContent = "Please put in a correct email address";
     emailError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++;
-    return false;
+    
   } else {
     email.style.border = "2px solid green";
     emailError.textContent = "";
@@ -110,14 +110,14 @@ const ValidateForm = (event) => {
     passwordError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++;
-    return false;
+    
   } else if (!password.value.match(passwordregex)) {
     password.style.border = "2px solid red";
     passwordError.textContent = "Please put in the correct password";
     passwordError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++;
-    return false;
+    
   } else {
     password.style.border = "2px solid darkgreen";
     passwordError.innerHTML = "";
@@ -131,23 +131,18 @@ const ValidateForm = (event) => {
     confirmPasswordError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++;
-    return false;
+    
   }else if(confirmPassword.value !== password.value) {
     confirmPassword.style.border = "2px solid red";
     confirmPasswordError.textContent = "Passwords don't match";
     confirmPasswordError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++;
-    return false;
+    
   } else {
     confirmPassword.style.border = "2px solid darkgreen";
     confirmPasswordError.innerHTML = "";
   }
-
-  // if(error > 0){
-   
-  //   event.stopImmediatePropagation();
-  // }
 
 
 };
