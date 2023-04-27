@@ -59,7 +59,7 @@ const ValidatemyForm = (event) => {
   // }
 };
 
-var baseUrl = "http://localhost:4000/api/auth/";
+var baseUrl = "https://project-u-backend.herokuapp.com/api/auth/";
 
 document
   .getElementById("submitbutton")
