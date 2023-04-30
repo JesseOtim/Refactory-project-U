@@ -7,13 +7,11 @@
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      integrity="sha386-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
     <link href="/css/bootstrap.css" rel="stylesheet" />
     <link href="/css/aoDash.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -115,7 +113,7 @@
       data-bs-whatever="@fat"
       id="button"
     >
-      <i class="bi bi-plus-lg"></i> User
+      <i class="bi bi-plus-lg"></i> FarmerOne
     </button>
 
     <h2>Agricultural Officer</h2>
@@ -127,7 +125,7 @@
               <h5 class="card-title">
                 <i
                   class="bi bi-graph-up-arrow"
-                  style="color: darkgreen; font-size: 40px"
+                  style="color: darkgreen; font-size: 60px"
                 ></i>
                 Total Sales
               </h5>
@@ -142,7 +140,7 @@
               <h5 class="card-title">
                 <i
                   class="bi bi-piggy-bank-fill"
-                  style="color: red; font-size: 40px"
+                  style="color: red; font-size: 60px"
                 ></i>
                 Monthly Sales
               </h5>
@@ -152,12 +150,12 @@
         </div>
 
         <div class="col">
-          <div class="card" style="width: 18rem" id="card4">
+          <div class="card" style="width: 18rem" id="card6">
             <div class="card-body">
               <h5 class="card-title">
                 <i
                   class="bi bi-wallet"
-                  style="color: orangered; font-size: 40px"
+                  style="color: orangered; font-size: 60px"
                 ></i>
                 Expenses
               </h5>
@@ -208,149 +206,241 @@
               ></button>
             </div>
             <div class="modal-body">
-              <form
-                name="aoDash"
-                action="Users.html"
-                onsubmit="return Validateform();"
-                method="POST"
-              >
+              <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-6">
+                  <label for="validationCustom01" class="form-label">First name</label>
+                  <input type="text" class="form-control" id="validationCustom01" required>
+                  <div class="invalid-feedback">
+                    Please fill in your first name.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom02" class="form-label">Last name</label>
+                  <input type="text" class="form-control" id="validationCustom02" required>
+                  <div class="invalid-feedback">
+                    Please fill in your last name.
+                  </div>
+                </div>
+              
+                <div class="col-md-6">
+                  <label for="validationCustom03" class="form-label">NIN</label>
+                  <input type="text" class="form-control" id="validationCustom03" required>
+                  <div class="invalid-feedback">
+                    Please provide a NIN.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom04" class="form-label">Phonenumber</label>
+                  <input type="tel" class="form-control" id="validationCustom04" required>
+                  <div class="invalid-feedback">
+                    Please provide a Phonenumber.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom05" class="form-label">Date of Birth</label>
+                  <input type="date" class="form-control" id="validationCustom05" required>
+                  <div class="invalid-feedback">
+                    Please provide a date of birth.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom06" class="form-label">Date of Registration</label>
+                  <input type="date" class="form-control" id="validationCustom06" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid registration date.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom07" class="form-label">Period of Stay</label>
+                  <input type="text" class="form-control" id="validationCustom07" required>
+                  <div class="invalid-feedback">
+                    Please provide your period of stay.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom08" class="form-label">Residence type</label>
+                  <select class="form-select" id="validationCustom08" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>Temporary</option>
+                    <option>Permanent</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a residence type.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom09" class="form-label">Ward</label>
+                  <select class="form-select" id="validationCustom09" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a ward.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom08" class="form-label">Role</label>
+                  <select class="form-select" id="validationCustom08" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>FarmerOne</option>
+                    <option>UrbanFarmer</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a residence type.
+                  </div>
+                </div>
+                
+                <div class="col-12">
+                  <button class="btn btn-success" type="submit">Submit</button>
+                </div>
+              </form>
+              <!-- <form class="row g-3 needs-validation" novalidate>
                 <div class="row">
                   <div class="col-md-6">
-                    <label for="firstname" class="form-label"
-                      >First name</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="firstname"
-                      name="firstName"
-                    />
-                    <small id="firstnameErr"></small>
+
+                    <div class="form-group">
+                      <label for="validationCustom01" class="form-label">First name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="validationCustom01"
+                        name="firstName"
+                        placeholder="First Name"
+                        required
+                      />
+                    </div>
+                    <div class="valid-feedback">Looks good!</div>
                   </div>
 
                   <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label"
+                    <label for="validationCustom02" class="form-label"
                       >Last name</label
                     >
-                    <input type="lastname" class="form-control" id="lastname" />
-                    <small id="lastnameErr"></small>
+                    <input type="lastname" class="form-control" id="validationCustom02"  placeholder="Last Name" required/>
+                    <div class="valid-feedback">Looks good!</div>
                   </div>
 
                   <div class="col-md-6">
-                    <label for="inputAddress2" class="form-label">NIN</label>
+                    <label for="validationCustom03" class="form-label">NIN</label>
                     <input
                       type="text"
                       class="form-control"
-                      id="NIN"
+                      id="validationCustom03"
                       placeholder=""
                     />
-                    <small id="NINErr"></small>
+                    <div class="invalid-feedback">
+                      Please provide a valid city.
+                    </div>
                   </div>
                   <div class="col-md-6">
-                    <label for="inputAddress2" class="form-label"
+                    <label for="validationCustom06" class="form-label"
                       >Phone number</label
                     >
                     <input
                       type="tel"
                       class="form-control"
-                      id="phonenumber"
+                      id="validationCustom06"
                       placeholder=""
                     />
-                    <small id="phonenumberErr"></small>
+                    <div class="invalid-feedback">Please provide a valid zip.</div>
                   </div>
 
                   <div class="col-md-6">
-                    <label for="inputAddress2" class="form-label"
+                    <label for="validationCustom05" class="form-label"
                       >Date of Birth</label
                     >
                     <input
                       type="date"
                       class="form-control"
-                      id="dob"
+                      id="validationCustom05"
                       placeholder=""
                     />
-
-                    <small id="dobErr"></small>
+                    <div class="invalid-feedback">Please provide a valid zip.</div>
                   </div>
 
                   <div class="col-md-6">
-                    <label for="inputAddress2" class="form-label"
+                    <label for="validationCustom06" class="form-label"
                       >Date of Registration</label
                     >
                     <input
                       type="date"
                       class="form-control"
-                      id="dor"
+                      id="validationCustom06"
                       placeholder=""
                     />
-                    <small id="dorErr"></small>
+                    <div class="invalid-feedback">Please provide a valid zip.</div>
                   </div>
 
                   <div class="col-md-6">
-                    <label for="inputAddress2" class="form-label"
+                    <label for="validationCustom07" class="form-label"
                       >Period of stay</label
                     >
                     <input
                       type="text"
                       class="form-control"
-                      id="pos"
+                      id="validationCustom07"
                       placeholder=""
                     />
-                    <small id="posErr"></small>
+                    <div class="invalid-feedback">Please provide a valid zip.</div>
                   </div>
 
                   <div class="col-md-6">
-                    <label for="inputState" class="form-label"
+                    <label for="validationCustom08" class="form-label"
                       >Residence type</label
                     >
-                    <select id="residencetype" class="form-select">
+                    <select id="validationCustom08" class="form-select">
                       <option>Select</option>
                       <option>Permanent</option>
                       <option>Temporary</option>
                     </select>
-                    <small id="residencetypeErr"></small>
+                    <div class="invalid-feedback">Please select a residence type</div>
                   </div>
 
                   <div class="col-md-6">
-                    <label for="inputState" class="form-label">Ward</label>
-                    <select id="ward" class="form-select">
+                    <label for="validationCustom09" class="form-label">Ward</label>
+                    <select id="validationCustom09" class="form-select">
                       <option>Select Ward</option>
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
-                      <option>4</option>
+                      <option>6</option>
                     </select>
-                    <small id="wardErr"></small>
+                    <div class="invalid-feedback">Please select a ward.</div>
                   </div>
 
                   <div class="col-md-6">
-                    <label for="inputState" class="form-label">Role</label>
-                    <select id="role" class="form-select">
+                    <label for="validationCustom10" class="form-label">Role</label>
+                    <select id="validationCustom10" class="form-select">
                       <option>Select Role</option>
                       <option>Agricultral Officer (AO)</option>
                       <option>Farmer One (FO)</option>
                       <option>Urban Farmer (UF)</option>
                     </select>
-                    <small id="roleErr"></small>
+                    <div class="invalid-feedback">Please select a role.</div>
                   </div>
                 </div>
-              </form>
+
+                <button type="submit" class="btn btn-secondary">submit</button>
+              </form>  -->
             </div>
-            <div class="modal-footer">
-              <button
+            <!-- <div class="modal-footer"> -->
+              <!-- <button
                 type="button"
                 class="btn btn-secondary"
                 data-bs-dismiss="modal"
               >
                 Close
               </button>
-              <!-- <button type="submit" class="btn btn-success" id="submitbutton">Register</button> -->
+              <button type="submit" class="btn btn-success" id="submitbutton">Register</button> 
               <input
                 id="submitbutton"
                 type="submit"
                 value="submit"
                 class="btn btn-success"
-              />
+              />  -->
             </div>
           </div>
         </div>
@@ -379,13 +469,20 @@
         </div>
       </div>
     </div>
-    
-    <script
+
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha386-ENjdO6Dr2bkBIFxQpeoTz1HIcje39Wm6jDKdf19U8gI6ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script> -->
+    <script src="../js/validation.js"></script>
+     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      integrity="sha386-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-  <script src="../js/aoDash.js"></script>
-    <script src="../js/Chart.js"></script>
+    <!-- <script src="../js/aoDash.js"></script> -->
+    <script src="../js/Chart.js"></script> -->
+    
   </body>
 </html>

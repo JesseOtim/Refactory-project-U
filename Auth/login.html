@@ -24,7 +24,7 @@
           <h1 class="logo">
             <a href="index.html"><span>| U</span>-Farm</a>
           </h1>
-          <form
+          <!-- <form
             name="login"
             id="login"
             action=""
@@ -53,6 +53,27 @@
             <input id="submitbutton" type="submit" value="submit" class="btn btn-success btn-lg" >
             <p>No account?<a href="../Auth/signup.html"> Signup</a></p>
             <p><a href="../index.html">< Home</a></p>
+          </form> -->
+
+          <form class=" needs-validation" novalidate>
+            <div class="mb-3">
+              <label for="validationCustom01" class="form-label">Email</label>
+              <input type="text" class="form-control" id="email" required>
+              <div class="invalid-feedback">
+                Please fill in your email.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="validationCustom02" class="form-label">Password</label>
+              <input type="text" class="form-control" id="password" required>
+              <div class="invalid-feedback">
+                Password can't be blank.
+              </div>
+            </div>
+            <input id="submitbutton" type="submit" value="submit" class="btn btn-success btn-lg" >
+            <p>No account?<a href="../Auth/signup.html"> Signup</a></p>
+            <p><a href="../index.html">< Home</a></p>
+           
           </form>
         </div>
       </div>
@@ -89,7 +110,9 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/validation.js"></script>
     <script src="../js/login.js"></script>
+   
   </body>
 </html>
 -
