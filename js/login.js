@@ -6,6 +6,7 @@ const ValidatemyForm = (event) => {
   //errors
   let emailError = document.getElementById("emailErr");
   let passwordError = document.getElementById("passwordErr");
+  let generalError = document.getElementById("generalErr");
 
   //email validation
   const emailregex =
@@ -15,15 +16,15 @@ const ValidatemyForm = (event) => {
     emailError.innerHTML = "Please the email must be filled";
     emailError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-    error++;
-    return false;
+    
+
   } else if (!email.value.match(emailregex)) {
     email.style.border = "2px solid red";
     emailError.innerHTML = "Please put in a correct email address";
     emailError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-    error++;
-    return false;
+    
+
   } else {
     email.style.border = "2px solid darkgreen";
     emailError.textContent = "";
@@ -37,21 +38,32 @@ const ValidatemyForm = (event) => {
     passwordError.innerHTML = "Password can't be blank";
     passwordError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-    error++;
-    return false;
+    
+
   } else if (!password.value.match(passwordregex)) {
     password.style.border = "2px solid red";
     passwordError.innerHTML =
       "Your password should include atleast one Uppercase and lowercase letter, a number";
     passwordError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-    error++;
+    
 
-    return false;
+
   } else {
     password.style.border = "2px solid darkgreen";
     passwordError.innerHTML = "";
   }
+
+ // check for general errors
+ if (emailError.innerHTML !== "" || passwordError.innerHTML !== "") {
+  generalError.innerHTML = "Please fix the errors in the form";
+  generalError.style =
+    "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+
+} else {
+  generalError.innerHTML = "";
+}
 
   // if (error > 0) {
   //   event.stopImmediatePropagation();
@@ -59,13 +71,10 @@ const ValidatemyForm = (event) => {
   // }
 };
 
-var baseUrl = "https://project-u-backend.herokuapp.com/api/auth/";
+var baseUrl = 'https://project-u-backend.herokuapp.com/api/auth/';
 
-document
-  .getElementById("submitbutton")
-  .addEventListener("click", function (click) {
-    newLogin(click);
-  });
+const submitButton = document.getElementById("submitbutton");
+submitButton.addEventListener("click", ValidatemyForm);
 
 async function newLogin(event) {
   event.preventDefault();
@@ -88,6 +97,11 @@ async function newLogin(event) {
     const data = await response.json();
     console.log(data, ">>>>>>>>>");
     if (data.status == 200) {
+      // Show the toast only when the form is submitted successfully
+      var toastEl = document.getElementById("liveToast");
+      //This bootstrap constructor shows or hides the toast
+      var toast = new bootstrap.Toast(toastEl);
+      toast.show();
       // alert(data.message)
       setTimeout(function () {
         location.href = "/pages/Products.html";
@@ -99,9 +113,4 @@ async function newLogin(event) {
 }
 
 var submitBtn = document.getElementById("submitbutton");
-submitBtn.addEventListener("click", function () {
-  var toastEl = document.getElementById("liveToast");
-  //This bootstrap constructor shows or hides the toast
-  var toast = new bootstrap.Toast(toastEl);
-  toast.show();
-});
+submitBtn.addEventListener("click", newLogin);

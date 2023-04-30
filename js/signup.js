@@ -15,7 +15,23 @@ const ValidateForm = (event) => {
   let passwordError = document.getElementById("passwordErr");
   let confirmPasswordError = document.getElementById("confirmpasswordErr");
 
+  // Add eventListeners
+  firstname.addEventListener('input', function() {
+    firstname.style.border = "2px solid green";
+  });
+  
+  lastName.addEventListener('input', function() {
+    lastName.style.border = "2px solid green";
+  });
+  
+  email.addEventListener('input', function() {
+    email.style.border = "2px solid green";
+  });
+  
+  
+
   // First name Validation
+
   if (firstname.value == "") {
     firstname.style.border = "2px solid red";
     firstnameError.innerHTML = "Please the name cannot be empty";
@@ -149,9 +165,8 @@ const ValidateForm = (event) => {
 
 var baseUrl = 'https://project-u-backend.herokuapp.com/api/auth/';
 
-document.getElementById('submitbutton').addEventListener('click', function(click) {
-    newSignup(click);
-});
+const submitButton = document.getElementById("submitbutton");
+submitButton.addEventListener("click", ValidateForm);
 
 async function newSignup(event) {
     event.preventDefault();
@@ -159,7 +174,6 @@ async function newSignup(event) {
     let lastname = document.getElementById('lastname').value;
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
-    
 
     try {
         console.log(email)
@@ -179,6 +193,11 @@ async function newSignup(event) {
         const data = await response.json()
         console.log(data,'>>>>>>>>>')
         if (data.status == 201) {
+            // Show the toast only when the form is submitted successfully
+            var toastEl = document.getElementById("liveToast");
+            //This bootstrap constructor shows or hides the toast
+            var toast = new bootstrap.Toast(toastEl);
+            toast.show();
             // alert(data.message)
             setTimeout(function(){location.href="/auth/login.html"} , 500);  
         }
@@ -189,12 +208,7 @@ async function newSignup(event) {
 
 };
 
-
 var submitBtn = document.getElementById("submitbutton");
-submitBtn.addEventListener("click", function () {
-  var toastEl = document.getElementById("liveToast");
-  //This bootstrap constructor shows or hides the toast
-  var toast = new bootstrap.Toast(toastEl);
-  toast.show();
-});
+submitBtn.addEventListener("click", newSignup);
+
 

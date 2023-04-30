@@ -1,5 +1,5 @@
 
-var baseUrl = 'http://localhost:4000/api/auth/';
+var baseUrl = 'https://project-u-backend.herokuapp.com/api/auth/';
 
 document.getElementById('submitbutton').addEventListener('click', function(click) {
     addProduct(click);
@@ -60,6 +60,29 @@ uploadInput.addEventListener('change', async () => {
   imageUrlInput.value = secure_url;
   form.appendChild(imageUrlInput);
 });
+
+
+const deleteBtns = document.querySelectorAll(".delete-btn");
+
+deleteBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const productId = btn.closest(".card").id;
+    deleteProduct(productId);
+  });
+});
+
+function deleteProduct(productId) {
+  fetch(`/api/auth/products/${productId}`, {
+    method: "DELETE",
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      // refresh the page or remove the product from the UI
+    })
+    .catch((error) => console.log(error));
+}
+
 
 
 

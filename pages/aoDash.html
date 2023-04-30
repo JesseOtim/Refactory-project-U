@@ -58,12 +58,15 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../pages/aoDash.html">Dashboard</a>
-              </li>
-              <li class="nav-item">
                 <a
                   class="nav-link"
-                  href="../pages/Profile.html"
+                  aria-current="page"
+                  href="../pages/aoDash.html"
+                  >Dashboard</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/Profile.html"
                   ><i class="bi bi-person-circle" style="color: darkgreen"></i>
                   Profile</a
                 >
@@ -77,9 +80,7 @@
               </li>
 
               <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="../pages/Users.html"
+                <a class="nav-link" href="../pages/Users.html"
                   ><i class="bi bi-r-circle" style="color: darkgreen"></i>
                   Users</a
                 >
@@ -92,7 +93,6 @@
                   ><i class="bi bi-gear" style="color: black"></i> Settings</a
                 >
               </li>
-
             </ul>
             <a href="../index.html">
               <button type="button" class="btn btn-success">
@@ -124,7 +124,13 @@
         <div class="col">
           <div class="card" style="width: 18rem" id="card1">
             <div class="card-body">
-              <h5 class="card-title"><i class="bi bi-graph-up-arrow" style="color:darkgreen; font-size: 40px;"></i> Total Sales</h5>
+              <h5 class="card-title">
+                <i
+                  class="bi bi-graph-up-arrow"
+                  style="color: darkgreen; font-size: 40px"
+                ></i>
+                Total Sales
+              </h5>
               <p class="card-text">UGX: 9,850,000</p>
             </div>
           </div>
@@ -133,7 +139,13 @@
         <div class="col">
           <div class="card" style="width: 18rem" id="card3">
             <div class="card-body">
-              <h5 class="card-title"><i class="bi bi-piggy-bank-fill" style="color:red; font-size: 40px;"></i>  Monthly Sales</h5>
+              <h5 class="card-title">
+                <i
+                  class="bi bi-piggy-bank-fill"
+                  style="color: red; font-size: 40px"
+                ></i>
+                Monthly Sales
+              </h5>
               <p class="card-text">UGX: 8OO,OOO++</p>
             </div>
           </div>
@@ -142,7 +154,13 @@
         <div class="col">
           <div class="card" style="width: 18rem" id="card4">
             <div class="card-body">
-              <h5 class="card-title"><i class="bi bi-wallet" style="color:orangered; font-size: 40px;"></i> Expenses</h5>
+              <h5 class="card-title">
+                <i
+                  class="bi bi-wallet"
+                  style="color: orangered; font-size: 40px"
+                ></i>
+                Expenses
+              </h5>
               <p class="card-text">UGX: 200,000</p>
             </div>
           </div>
@@ -190,19 +208,26 @@
               ></button>
             </div>
             <div class="modal-body">
-              <form name="aoDash" action="Users.html" onsubmit="return Validateform(event);" method="POST">
+              <form
+                name="aoDash"
+                action="Users.html"
+                onsubmit="return Validateform();"
+                method="POST"
+              >
                 <div class="row">
                   <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label"
+                    <label for="firstname" class="form-label"
                       >First name</label
                     >
                     <input
-                      type="firstname"
+                      type="text"
                       class="form-control"
                       id="firstname"
+                      name="firstName"
                     />
                     <small id="firstnameErr"></small>
                   </div>
+
                   <div class="col-md-6">
                     <label for="inputPassword4" class="form-label"
                       >Last name</label
@@ -320,7 +345,12 @@
                 Close
               </button>
               <!-- <button type="submit" class="btn btn-success" id="submitbutton">Register</button> -->
-              <input id="submitbutton" type="submit" value="submit" class="btn btn-success" >
+              <input
+                id="submitbutton"
+                type="submit"
+                value="submit"
+                class="btn btn-success"
+              />
             </div>
           </div>
         </div>
@@ -328,7 +358,6 @@
     </div>
 
     <!-- Table Data ends -->
-
 
     <div class="toast-container position-fixed top-0 end-0 p-3">
       <div
@@ -338,7 +367,7 @@
         aria-live="assertive"
         aria-atomic="true"
       >
-      <!-- Changed background to green (bg-succcess) and text white-->
+        <!-- Changed background to green (bg-succcess) and text white-->
         <div class="toast-header bg-success text-white">
           <strong class="me-auto">Farmer successfully registered</strong>
           <button
@@ -350,13 +379,13 @@
         </div>
       </div>
     </div>
-
+    
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    <script src="../js/aoDash.js"></script>
+  <script src="../js/aoDash.js"></script>
     <script src="../js/Chart.js"></script>
   </body>
 </html>
