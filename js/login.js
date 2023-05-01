@@ -115,7 +115,7 @@ async function newLogin(event) {
           location.href = "/pages/ufDash.html";
         }
         if (data.data.role === 'user') {
-          location.href = "/pages/Product.html";
+          location.href = "/pages/Products.html";
         }
       }, 500);
     }
