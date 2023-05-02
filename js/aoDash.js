@@ -278,8 +278,8 @@ fetch("http://localhost:4000/api/auth/farmers/", {
           <td>${item?.periodofstay}</td>   
           <td>${item?.ward}</td>
           <td>${item?.role}</td> 
-          <td><button type="button" id="${item?.id}" data-bs-toggle="modal" data-bs-target="#exampleModal11">
-          <i class="bi bi-trash" style="color: red; outline:none;"></i>
+          <td><button type="button" class=btn btn id="${item?.id}" data-bs-toggle="modal" data-bs-target="#exampleModal11">
+          <i class="bi bi-trash" style="color: red; outline:none; font-size:20px;"></i>
         </button>
         </td>
           <td><i class="bi bi-pencil-square"></i></td>

@@ -80,6 +80,72 @@
 //     .catch((error) => console.log(error));
 // }
 
+// var baseUrl = "http://localhost:4000/api/auth/";
+
+// const submitButton = document.getElementById("submitbutton");
+// submitButton.addEventListener("click", addProduct);
+
+// async function addProduct(event) {
+//   event.preventDefault();
+//   let name = document.getElementById("name").value;
+//   let price = document.getElementById("price").value;
+//   let productImageInput = document.getElementById("productimage");
+//   let category = document.getElementById("category").value;
+//   let quantity = document.getElementById("quantity").value;
+
+
+//   try {
+//     console.log(productImage, '>>>>>>>>>>>');
+//     const productImage = await uploadImage(productImageInput);
+//     const response = await fetch(baseUrl + "products/", {
+//       method: "POST",
+//       headers: {
+//         "content-type": "application/json",
+//       },
+//       mode: "cors",
+//       body: JSON.stringify({
+//         name: name,
+//         price: price,
+//         productimage: productImage,
+//         category: category,
+//         quantity: quantity,
+//       }),
+//     });
+//     const data = await response.json();
+//     console.log(data, ">>>>>>>>>");
+//     if (data.status == 201) {
+  
+//       // Show the toast only when the form is submitted successfully
+//       var toastEl = document.getElementById("liveToast");
+//       //This bootstrap constructor shows or hides the toast
+//       var toast = new bootstrap.Toast(toastEl);
+//       toast.show();
+//       // alert(data.message)
+//       setTimeout(function () {
+//         location.href = "/pages/ufProducts.html";
+//       }, 500);
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// function uploadImage(productImageInput) {
+//   return new Promise((resolve, reject) => {
+//     const file = productImageInput.files[0];
+//     const reader = new FileReader();
+//     reader.readAsDataURL(file);
+//     reader.onload = () => resolve(reader.result);
+//     reader.onerror = error => reject(error);
+//   });
+// }
+
+
+
+
+
+
+
 var baseUrl = "http://localhost:4000/api/auth/";
 
 const submitButton = document.getElementById("submitbutton");
@@ -89,13 +155,14 @@ async function addProduct(event) {
   event.preventDefault();
   let name = document.getElementById("name").value;
   let price = document.getElementById("price").value;
-  let productimage = document.getElementById("productimage").value;
+  let productImageInput = document.getElementById("productimage");
   let category = document.getElementById("category").value;
   let quantity = document.getElementById("quantity").value;
 
 
   try {
-    console.log(name);
+    console.log(productImageInput, '>>>>>>>>>>>');
+    const productImage = await resizeImage(productImageInput);
     const response = await fetch(baseUrl + "products/", {
       method: "POST",
       headers: {
@@ -105,7 +172,7 @@ async function addProduct(event) {
       body: JSON.stringify({
         name: name,
         price: price,
-        productimage: productimage,
+        productimage: productImage,
         category: category,
         quantity: quantity,
       }),
@@ -128,6 +195,47 @@ async function addProduct(event) {
     console.log(error);
   }
 }
+
+function resizeImage(productImageInput) {
+  return new Promise((resolve, reject) => {
+    const file = productImageInput.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      const img = new Image();
+      img.src = reader.result;
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        const MAX_WIDTH = 200;
+        const MAX_HEIGHT = 200;
+        let width = img.width;
+        let height = img.height;
+    
+        if (width > height) {
+          if (width > MAX_WIDTH) {
+            height *= MAX_WIDTH / width;
+            width = MAX_WIDTH;
+          }
+        } else {
+          if (height > MAX_HEIGHT) {
+            width *= MAX_HEIGHT / height;
+            height = MAX_HEIGHT;
+          }
+        }
+    
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext('2d');
+    
+        ctx.drawImage(img, 0, 0, width, height);
+    
+        resolve(canvas.toDataURL());
+      }
+    }
+    reader.onerror = error => reject(error);
+  });
+}
+
 
 // var submitBtn = document.getElementById("submitbutton");
 // submitBtn.addEventListener("click", );
