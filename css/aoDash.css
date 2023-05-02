@@ -1,5 +1,6 @@
 body {
   font-family: Arial, sans-serif;
+  height: auto;
 }
 
 .logo {
@@ -10,6 +11,12 @@ body {
 
 span {
   color: orangered;
+}
+
+h1{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 

@@ -1,76 +1,76 @@
-const ValidatemyForm = (event) => {
-  event.preventDefault();
-  const email = document.getElementById("email");
-  const password = document.getElementById("password");
+// const ValidatemyForm = (event) => {
+//   event.preventDefault();
+//   const email = document.getElementById("email");
+//   const password = document.getElementById("password");
 
-  //errors
-  let emailError = document.getElementById("emailErr");
-  let passwordError = document.getElementById("passwordErr");
-  let generalError = document.getElementById("generalErr");
+//   //errors
+//   let emailError = document.getElementById("emailErr");
+//   let passwordError = document.getElementById("passwordErr");
+//   let generalError = document.getElementById("generalErr");
 
-  //email validation
-  const emailregex =/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  email.addEventListener('input', ()=> {
-  if (email.value == "") {
-    email.style.border = "2px solid red";
-    emailError.innerHTML = "Please the email must be filled";
-    emailError.style =
-      "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+//   //email validation
+//   const emailregex =/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//   email.addEventListener('input', ()=> {
+//   if (email.value == "") {
+//     email.style.border = "2px solid red";
+//     emailError.innerHTML = "Please the email must be filled";
+//     emailError.style =
+//       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     
 
-  } else if (!email.value.match(emailregex)) {
-    email.style.border = "2px solid red";
-    emailError.innerHTML = "Please put in a correct email address";
-    emailError.style =
-      "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+//   } else if (!email.value.match(emailregex)) {
+//     email.style.border = "2px solid red";
+//     emailError.innerHTML = "Please put in a correct email address";
+//     emailError.style =
+//       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     
 
-  } else {
-    email.style.border = "2px solid darkgreen";
-    emailError.textContent = "";
-  }
-});
+//   } else {
+//     email.style.border = "2px solid darkgreen";
+//     emailError.textContent = "";
+//   }
+// });
 
-  //password validation
-  const passwordregex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+//   //password validation
+//   const passwordregex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
 
-  if (password.value == "") {
-    password.style.border = "2px solid red";
-    passwordError.innerHTML = "Password can't be blank";
-    passwordError.style =
-      "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+//   if (password.value == "") {
+//     password.style.border = "2px solid red";
+//     passwordError.innerHTML = "Password can't be blank";
+//     passwordError.style =
+//       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     
 
-  } else if (!password.value.match(passwordregex)) {
-    password.style.border = "2px solid red";
-    passwordError.innerHTML =
-      "Your password should include atleast one Uppercase and lowercase letter, a number";
-    passwordError.style =
-      "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+//   } else if (!password.value.match(passwordregex)) {
+//     password.style.border = "2px solid red";
+//     passwordError.innerHTML =
+//       "Your password should include atleast one Uppercase and lowercase letter, a number";
+//     passwordError.style =
+//       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     
 
 
-  } else {
-    password.style.border = "2px solid darkgreen";
-    passwordError.innerHTML = "";
-  }
+//   } else {
+//     password.style.border = "2px solid darkgreen";
+//     passwordError.innerHTML = "";
+//   }
 
- // check for general errors
- if (emailError.innerHTML !== "" || passwordError.innerHTML !== "") {
-  generalError.innerHTML = "";
-  generalError.style =
-    "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-    error++
+//  // check for general errors
+//  if (emailError.innerHTML !== "" || passwordError.innerHTML !== "") {
+//   generalError.innerHTML = "";
+//   generalError.style =
+//     "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+//     error++
 
-} else {
-  generalError.innerHTML = "";
-}
+// } else {
+//   generalError.innerHTML = "";
+// }
 
-  // if (error > 0) {
-  //   event.stopImmediatePropagation();
+//   // if (error > 0) {
+//   //   event.stopImmediatePropagation();
     
-  // }
-};
+//   // }
+// };
 
 var baseUrl = "http://localhost:4000/api/auth/";
 

@@ -10,7 +10,10 @@
       integrity="sha386-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
 
     <link href="/css/bootstrap.css" rel="stylesheet" />
     <link href="/css/aoDash.css" rel="stylesheet" />
@@ -74,13 +77,6 @@
                 <a class="nav-link" href="../pages/aoProducts.html"
                   ><i class="bi bi-box-fill" style="color: orangered"></i>
                   Products</a
-                >
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="../pages/Users.html"
-                  ><i class="bi bi-r-circle" style="color: darkgreen"></i>
-                  FarmerOnes</a
                 >
               </li>
 
@@ -166,22 +162,25 @@
       </div>
     </div>
 
-    <!-- Contents end here -->
-
-    <!-- Chart.js -->
-    <div class="container-fluid">
-      <div class="row" id="card5">
-        <div class="col-xl-8">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Sales</h5>
-              <canvas id="myChart"></canvas>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Chart Ends -->
+    <!-- table -->
+    <h1 class="text-center">FarmerOnes</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Phone Number</th>
+          <th>National ID</th>
+          <th>Date of Birth</th>
+          <th>Date of Registration</th>
+          <th>Activities</th>
+          <th>Period of Stay</th>
+          <th>Ward</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
 
     <!-- Table Data -->
     <div class="container-fluid">
@@ -208,58 +207,85 @@
             <div class="modal-body">
               <form class="row g-3 needs-validation" novalidate>
                 <div class="col-md-6">
-                  <label for="validationCustom01" class="form-label">First name</label>
-                  <input type="text" class="form-control" id="validationCustom01" required>
+                  <label for="validationCustom01" class="form-label"
+                    >First name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstname"
+                    required
+                  />
                   <div class="invalid-feedback">
                     Please fill in your first name.
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <label for="validationCustom02" class="form-label">Last name</label>
-                  <input type="text" class="form-control" id="validationCustom02" required>
+                  <label for="validationCustom02" class="form-label"
+                    >Last name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastname"
+                    required
+                  />
                   <div class="invalid-feedback">
                     Please fill in your last name.
                   </div>
                 </div>
-              
+
                 <div class="col-md-6">
                   <label for="validationCustom03" class="form-label">NIN</label>
-                  <input type="text" class="form-control" id="validationCustom03" required>
-                  <div class="invalid-feedback">
-                    Please provide a NIN.
-                  </div>
+                  <input type="text" class="form-control" id="NIN" required />
+                  <div class="invalid-feedback">Please provide a NIN.</div>
                 </div>
                 <div class="col-md-6">
-                  <label for="validationCustom04" class="form-label">Phonenumber</label>
-                  <input type="tel" class="form-control" id="validationCustom04" required>
+                  <label for="validationCustom04" class="form-label"
+                    >Phonenumber</label
+                  >
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phonenumber"
+                    required
+                  />
                   <div class="invalid-feedback">
                     Please provide a Phonenumber.
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <label for="validationCustom05" class="form-label">Date of Birth</label>
-                  <input type="date" class="form-control" id="validationCustom05" required>
+                  <label for="validationCustom05" class="form-label"
+                    >Date of Birth</label
+                  >
+                  <input type="date" class="form-control" id="dob" required />
                   <div class="invalid-feedback">
                     Please provide a date of birth.
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <label for="validationCustom06" class="form-label">Date of Registration</label>
-                  <input type="date" class="form-control" id="validationCustom06" required>
+                  <label for="validationCustom06" class="form-label"
+                    >Date of Registration</label
+                  >
+                  <input type="date" class="form-control" id="dor" required />
                   <div class="invalid-feedback">
                     Please provide a valid registration date.
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <label for="validationCustom07" class="form-label">Period of Stay</label>
-                  <input type="text" class="form-control" id="validationCustom07" required>
+                  <label for="validationCustom07" class="form-label"
+                    >Period of Stay</label
+                  >
+                  <input type="text" class="form-control" id="pos" required />
                   <div class="invalid-feedback">
                     Please provide your period of stay.
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <label for="validationCustom08" class="form-label">Residence type</label>
-                  <select class="form-select" id="validationCustom08" required>
+                  <label for="validationCustom08" class="form-label"
+                    >Residence type</label
+                  >
+                  <select class="form-select" id="residencetype" required>
                     <option selected disabled value="">Choose...</option>
                     <option>Temporary</option>
                     <option>Permanent</option>
@@ -269,21 +295,23 @@
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <label for="validationCustom09" class="form-label">Ward</label>
-                  <select class="form-select" id="validationCustom09" required>
+                  <label for="validationCustom09" class="form-label"
+                    >Ward</label
+                  >
+                  <select class="form-select" id="ward" required>
                     <option selected disabled value="">Choose...</option>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
                   </select>
-                  <div class="invalid-feedback">
-                    Please select a ward.
-                  </div>
+                  <div class="invalid-feedback">Please select a ward.</div>
                 </div>
                 <div class="col-md-6">
-                  <label for="validationCustom08" class="form-label">Role</label>
-                  <select class="form-select" id="validationCustom08" required>
+                  <label for="validationCustom08" class="form-label"
+                    >Role</label
+                  >
+                  <select class="form-select" id="role" required>
                     <option selected disabled value="">Choose...</option>
                     <option>FarmerOne</option>
                     <option>UrbanFarmer</option>
@@ -292,156 +320,56 @@
                     Please select a residence type.
                   </div>
                 </div>
-                
+
                 <div class="col-12">
-                  <button class="btn btn-success" type="submit">Submit</button>
+                  <button
+                    id="submitbutton"
+                    class="btn btn-success"
+                    type="submit"
+                  >
+                    Submit
+                  </button>  
                 </div>
               </form>
-              <!-- <form class="row g-3 needs-validation" novalidate>
-                <div class="row">
-                  <div class="col-md-6">
-
-                    <div class="form-group">
-                      <label for="validationCustom01" class="form-label">First name</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="validationCustom01"
-                        name="firstName"
-                        placeholder="First Name"
-                        required
-                      />
-                    </div>
-                    <div class="valid-feedback">Looks good!</div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <label for="validationCustom02" class="form-label"
-                      >Last name</label
-                    >
-                    <input type="lastname" class="form-control" id="validationCustom02"  placeholder="Last Name" required/>
-                    <div class="valid-feedback">Looks good!</div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <label for="validationCustom03" class="form-label">NIN</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="validationCustom03"
-                      placeholder=""
-                    />
-                    <div class="invalid-feedback">
-                      Please provide a valid city.
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="validationCustom06" class="form-label"
-                      >Phone number</label
-                    >
-                    <input
-                      type="tel"
-                      class="form-control"
-                      id="validationCustom06"
-                      placeholder=""
-                    />
-                    <div class="invalid-feedback">Please provide a valid zip.</div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <label for="validationCustom05" class="form-label"
-                      >Date of Birth</label
-                    >
-                    <input
-                      type="date"
-                      class="form-control"
-                      id="validationCustom05"
-                      placeholder=""
-                    />
-                    <div class="invalid-feedback">Please provide a valid zip.</div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <label for="validationCustom06" class="form-label"
-                      >Date of Registration</label
-                    >
-                    <input
-                      type="date"
-                      class="form-control"
-                      id="validationCustom06"
-                      placeholder=""
-                    />
-                    <div class="invalid-feedback">Please provide a valid zip.</div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <label for="validationCustom07" class="form-label"
-                      >Period of stay</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="validationCustom07"
-                      placeholder=""
-                    />
-                    <div class="invalid-feedback">Please provide a valid zip.</div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <label for="validationCustom08" class="form-label"
-                      >Residence type</label
-                    >
-                    <select id="validationCustom08" class="form-select">
-                      <option>Select</option>
-                      <option>Permanent</option>
-                      <option>Temporary</option>
-                    </select>
-                    <div class="invalid-feedback">Please select a residence type</div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <label for="validationCustom09" class="form-label">Ward</label>
-                    <select id="validationCustom09" class="form-select">
-                      <option>Select Ward</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>6</option>
-                    </select>
-                    <div class="invalid-feedback">Please select a ward.</div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <label for="validationCustom10" class="form-label">Role</label>
-                    <select id="validationCustom10" class="form-select">
-                      <option>Select Role</option>
-                      <option>Agricultral Officer (AO)</option>
-                      <option>Farmer One (FO)</option>
-                      <option>Urban Farmer (UF)</option>
-                    </select>
-                    <div class="invalid-feedback">Please select a role.</div>
-                  </div>
-                </div>
-
-                <button type="submit" class="btn btn-secondary">submit</button>
-              </form>  -->
             </div>
-            <!-- <div class="modal-footer"> -->
-              <!-- <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="submit" class="btn btn-success" id="submitbutton">Register</button> 
-              <input
-                id="submitbutton"
-                type="submit"
-                value="submit"
-                class="btn btn-success"
-              />  -->
-            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal11"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Delete</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Are you sure you want to delete this farmer
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              No
+            </button>
+            <button type="submit" class="btn btn-primary" id="deleteFarmers">
+              Yes
+            </button>
           </div>
         </div>
       </div>
@@ -470,19 +398,11 @@
       </div>
     </div>
 
-    <!-- <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha386-ENjdO6Dr2bkBIFxQpeoTz1HIcje39Wm6jDKdf19U8gI6ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script> -->
-    <script src="../js/validation.js"></script>
-     <script
+    <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha386-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="../js/aoDash.js"></script> -->
-    <script src="../js/Chart.js"></script> -->
-    
+    <script src="../js/aoDash.js"></script>
   </body>
 </html>
