@@ -140,12 +140,14 @@
 
     <!-- Contents end here -->
         <!-- table -->
-        <h1 class="text-center">urbanFarmers</h1>
+        <h1 class="text-center">UrbanFarmers</h1>
         <table class="table">
           <thead>
             <tr>
               <th>First Name</th>
               <th>Last Name</th>
+              <th>Email</th>
+              <th>Password</th>
               <th>Phone Number</th>
               <th>National ID</th>
               <th>Date of Birth</th>
@@ -155,7 +157,7 @@
               <th>Role</th>
             </tr>
           </thead>
-          <tbody id="table-body"></tbody>
+          <tbody id="tablebody"></tbody>
         </table>
     
         <!-- Table Data -->
@@ -196,30 +198,44 @@
                     Please fill in your last name.
                   </div>
                 </div>
+                <div class="col-md-6">
+                  <label for="validationCustom03" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" required>
+                  <div class="invalid-feedback">
+                    Please provide an email.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom04" class="form-label">Password</label>
+                  <input type="text" class="form-control" id="password" required>
+                  <div class="invalid-feedback">
+                    Please provide a provide.
+                  </div>
+                </div>
               
                 <div class="col-md-6">
-                  <label for="validationCustom03" class="form-label">NIN</label>
+                  <label for="validationCustom05" class="form-label">NIN</label>
                   <input type="text" class="form-control" id="NIN" required>
                   <div class="invalid-feedback">
                     Please provide a NIN.
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <label for="validationCustom04" class="form-label">Phonenumber</label>
+                  <label for="validationCustom06" class="form-label">Phonenumber</label>
                   <input type="tel" class="form-control" id="phonenumber" required>
                   <div class="invalid-feedback">
                     Please provide a Phonenumber.
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <label for="validationCustom05" class="form-label">Date of Birth</label>
+                  <label for="validationCustom07" class="form-label">Date of Birth</label>
                   <input type="date" class="form-control" id="dob" required>
                   <div class="invalid-feedback">
                     Please provide a date of birth.
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <label for="validationCustom06" class="form-label">Date of Registration</label>
+                  <label for="validationCustom08" class="form-label">Date of Registration</label>
                   <input type="date" class="form-control" id="dor" required>
                   <div class="invalid-feedback">
                     Please provide a valid registration date.
@@ -227,7 +243,7 @@
                 </div>
                
                 <div class="col-md-6">
-                  <label for="validationCustom07" class="form-label">Activities</label>
+                  <label for="validationCustom09" class="form-label">Activities</label>
                   <select class="form-select" id="activities" required>
                     <option selected disabled value="">Choose...</option>
                     <option>Inspect</option>
@@ -239,13 +255,23 @@
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <label for="validationCustom09" class="form-label">Ward</label>
+                  <label for="validationCustom10" class="form-label">Ward</label>
                   <select class="form-select" id="ward" required>
                     <option selected disabled value="">Choose...</option>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a ward.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom11" class="form-label">Ward</label>
+                  <select class="form-select" id="role" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>urbanFarmer</option>
                   </select>
                   <div class="invalid-feedback">
                     Please select a ward.

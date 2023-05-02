@@ -1,46 +1,46 @@
-// var baseUrl = 'http://localhost:4000/api/auth/';
+var baseUrl = 'http://localhost:4000/api/auth/';
 
-// document.getElementById('submitbutton').addEventListener('click', function(click) {
-//     addProduct(click);
-// });
+document.getElementById('submitbutton').addEventListener('click', function(click) {
+    addProduct(click);
+});
 
-// async function addProduct(event) {
-//     event.preventDefault();
-//     let name= document.getElementById('name').value;
-//     let price = document.getElementById('price').value;
-//     let image = document.getElementById('uploadimage').value;
-//     let category = document.getElementById('category').value;
-//     let quantity= document.getElementById('quantity').value;
+async function addProduct(event) {
+    event.preventDefault();
+    let name= document.getElementById('name').value;
+    let price = document.getElementById('price').value;
+    let image = document.getElementById('uploadimage').value;
+    let category = document.getElementById('category').value;
+    let quantity= document.getElementById('quantity').value;
 
-//     try {
+    try {
 
-//         const response = await fetch(baseUrl + 'products/', {
-//             method: 'POST',
-//             headers: {
-//                 'content-type': 'application/json'
-//             },
-//             mode: 'cors',
-//             body: JSON.stringify({
-//                 "name": name,
-//                 "price": price,
-//                 "image": image,
-//                 "category": category,
-//                 "quantity": quantity,
-//             })
-//         })
-//         const data = await response.json()
-//         console.log(data,'>>>>>>>>>')
-//         if (data.status == 201) {
-//             alert(data.message)
-//             //close modal
-//             setTimeout(function(){location.href="/Auth/Products.html"} , 200);
-//         }
+        const response = await fetch(baseUrl + 'products/', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            mode: 'cors',
+            body: JSON.stringify({
+                "name": name,
+                "price": price,
+                "image": image,
+                "category": category,
+                "quantity": quantity,
+            })
+        })
+        const data = await response.json()
+        console.log(data,'>>>>>>>>>')
+        if (data.status == 201) {
+            alert(data.message)
+            //close modal
+            setTimeout(function(){location.href="/Auth/Products.html"} , 200);
+        }
 
-//     } catch (error) {
-//         console.log(error)
-//     }
+    } catch (error) {
+        console.log(error)
+    }
 
-// }
+}
 
 // const form = document.getElementById('register-form');
 // const uploadInput = document.getElementById('uploadimage');
@@ -146,95 +146,95 @@
 
 
 
-var baseUrl = "http://localhost:4000/api/auth/";
+// var baseUrl = "http://localhost:4000/api/auth/";
 
-const submitButton = document.getElementById("submitbutton");
-submitButton.addEventListener("click", addProduct);
+// const submitButton = document.getElementById("submitbutton");
+// submitButton.addEventListener("click", addProduct);
 
-async function addProduct(event) {
-  event.preventDefault();
-  let name = document.getElementById("name").value;
-  let price = document.getElementById("price").value;
-  let productImageInput = document.getElementById("productimage");
-  let category = document.getElementById("category").value;
-  let quantity = document.getElementById("quantity").value;
+// async function addProduct(event) {
+//   event.preventDefault();
+//   let name = document.getElementById("name").value;
+//   let price = document.getElementById("price").value;
+//   let productImageInput = document.getElementById("productimage");
+//   let category = document.getElementById("category").value;
+//   let quantity = document.getElementById("quantity").value;
 
 
-  try {
-    console.log(productImageInput, '>>>>>>>>>>>');
-    const productImage = await resizeImage(productImageInput);
-    const response = await fetch(baseUrl + "products/", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      mode: "cors",
-      body: JSON.stringify({
-        name: name,
-        price: price,
-        productimage: productImage,
-        category: category,
-        quantity: quantity,
-      }),
-    });
-    const data = await response.json();
-    console.log(data, ">>>>>>>>>");
-    if (data.status == 201) {
+//   try {
+//     console.log(productImageInput, '>>>>>>>>>>>');
+//     const productImage = await resizeImage(productImageInput);
+//     const response = await fetch(baseUrl + "products/", {
+//       method: "POST",
+//       headers: {
+//         "content-type": "application/json",
+//       },
+//       mode: "cors",
+//       body: JSON.stringify({
+//         name: name,
+//         price: price,
+//         productimage: productImage,
+//         category: category,
+//         quantity: quantity,
+//       }),
+//     });
+//     const data = await response.json();
+//     console.log(data, ">>>>>>>>>");
+//     if (data.status == 201) {
   
-      // Show the toast only when the form is submitted successfully
-      var toastEl = document.getElementById("liveToast");
-      //This bootstrap constructor shows or hides the toast
-      var toast = new bootstrap.Toast(toastEl);
-      toast.show();
-      // alert(data.message)
-      setTimeout(function () {
-        location.href = "/pages/ufProducts.html";
-      }, 500);
-    }
-  } catch (error) {
-    console.log(error);
-  }
-}
+//       // Show the toast only when the form is submitted successfully
+//       var toastEl = document.getElementById("liveToast");
+//       //This bootstrap constructor shows or hides the toast
+//       var toast = new bootstrap.Toast(toastEl);
+//       toast.show();
+//       // alert(data.message)
+//       setTimeout(function () {
+//         location.href = "/pages/ufProducts.html";
+//       }, 500);
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
 
-function resizeImage(productImageInput) {
-  return new Promise((resolve, reject) => {
-    const file = productImageInput.files[0];
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => {
-      const img = new Image();
-      img.src = reader.result;
-      img.onload = () => {
-        const canvas = document.createElement('canvas');
-        const MAX_WIDTH = 200;
-        const MAX_HEIGHT = 200;
-        let width = img.width;
-        let height = img.height;
+// function resizeImage(productImageInput) {
+//   return new Promise((resolve, reject) => {
+//     const file = productImageInput.files[0];
+//     const reader = new FileReader();
+//     reader.readAsDataURL(file);
+//     reader.onload = () => {
+//       const img = new Image();
+//       img.src = reader.result;
+//       img.onload = () => {
+//         const canvas = document.createElement('canvas');
+//         const MAX_WIDTH = 200;
+//         const MAX_HEIGHT = 200;
+//         let width = img.width;
+//         let height = img.height;
     
-        if (width > height) {
-          if (width > MAX_WIDTH) {
-            height *= MAX_WIDTH / width;
-            width = MAX_WIDTH;
-          }
-        } else {
-          if (height > MAX_HEIGHT) {
-            width *= MAX_HEIGHT / height;
-            height = MAX_HEIGHT;
-          }
-        }
+//         if (width > height) {
+//           if (width > MAX_WIDTH) {
+//             height *= MAX_WIDTH / width;
+//             width = MAX_WIDTH;
+//           }
+//         } else {
+//           if (height > MAX_HEIGHT) {
+//             width *= MAX_HEIGHT / height;
+//             height = MAX_HEIGHT;
+//           }
+//         }
     
-        canvas.width = width;
-        canvas.height = height;
-        const ctx = canvas.getContext('2d');
+//         canvas.width = width;
+//         canvas.height = height;
+//         const ctx = canvas.getContext('2d');
     
-        ctx.drawImage(img, 0, 0, width, height);
+//         ctx.drawImage(img, 0, 0, width, height);
     
-        resolve(canvas.toDataURL());
-      }
-    }
-    reader.onerror = error => reject(error);
-  });
-}
+//         resolve(canvas.toDataURL());
+//       }
+//     }
+//     reader.onerror = error => reject(error);
+//   });
+// }
 
 
 // var submitBtn = document.getElementById("submitbutton");
@@ -260,10 +260,10 @@ fetch("http://localhost:4000/api/auth/products/", {
           <h4>${product.category}</h4>
           <p>Qty: ${product.quantity}</p>
           <div class="icon-container">
-          <button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal11">
-          <i class="bi bi-trash" style="color: red; outline:none; font-size:80px;"></i>
+          <button type="button" class="btn btn" data-bs-toggle="modal" data-bs-target="#exampleModal11">
+          <i class="bi bi-trash" style="color: red; outline:none; font-size:35px; margin-left:60px; margin-right:20px;"></i>
         </button>
-            <button id="editProduct" class="edit-btn" data-id="${product._id}"><i class="bi bi-pencil-square"></i></button>
+            <button id="editProduct" class="edit-btn btn" style="font-size:35px;  margin-right:60px;"  data-id="${product._id}"><i class="bi bi-pencil-square"></i></button>
           </div>
         </div>`;
     });

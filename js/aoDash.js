@@ -210,6 +210,8 @@ async function addFarmer(event) {
 
   const firstname = document.getElementById("firstname").value;
   const lastname = document.getElementById("lastname").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
   const phonenumber = document.getElementById("phonenumber").value;
   const NIN = document.getElementById("NIN").value;
   const DOB = document.getElementById("dob").value;

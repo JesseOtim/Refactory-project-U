@@ -234,6 +234,8 @@ async function addFarmer(event) {
 
   const firstname = document.getElementById("firstname").value;
   const lastname = document.getElementById("lastname").value;
+  const email= document.getElementById("email").value;
+  const password = document.getElementById("password").value;
   const NIN = document.getElementById("NIN").value;
   const phonenumber = document.getElementById("phonenumber").value;
   const DOB = document.getElementById("dob").value;
@@ -252,6 +254,8 @@ async function addFarmer(event) {
       body: JSON.stringify({
         firstname: firstname,
         lastname: lastname,
+        email:email,
+        password:password,
         Phonenumber: phonenumber,
         NIN: NIN,
         DOB: DOB,
@@ -301,6 +305,8 @@ fetch("http://localhost:4000/api/auth/farmers/", {
       tabledata += `<tr>
           <td>${item?.firstname}</td>
           <td>${item?.lastname}</td>
+          <td>${item?.email}</td>
+          <td>${item?.password}</td>
           <td>${item?.Phonenumber}</td>
           <td>${item?.NIN}</td>
           <td>${item?.DOB}</td>
@@ -319,7 +325,7 @@ fetch("http://localhost:4000/api/auth/farmers/", {
         </tr>`;
     });
 
-    document.getElementById("table-body").innerHTML = tabledata;
+    document.getElementById("tablebody").innerHTML = tabledata;
   })
   .catch((error) => console.log(error));
 
