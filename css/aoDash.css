@@ -92,6 +92,10 @@ button{
   float:right;
 }
 
+table{
+  margin-top: 50px;
+}
+
 table tbody {
   font-weight: bold;
 }

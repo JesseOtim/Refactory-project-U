@@ -303,7 +303,7 @@ async function deletef(event, id) {
   event.preventDefault();
   try {
     const response = await fetch(
-      `http://localhost:4000/api/auth/farmer/${id}`,
+      `http://localhost:4000/api/auth/farmer/6451982b9d01fd279b06db48`,
       {
         method: "DELETE",
         headers: {
@@ -328,3 +328,8 @@ async function deletef(event, id) {
 //     row.remove();
 //   }
 // });
+
+function closeModal() {
+  $('#exampleModal').modal('hide');
+}
+
