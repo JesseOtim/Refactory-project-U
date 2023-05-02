@@ -243,13 +243,9 @@ async function addFarmer(event) {
     console.log(data, ">>>>>>>>>");
     if (data.status == 200) {
       populateTable();
-      // Show the toast only when the form is submitted successfully
       var toastEl = document.getElementById("liveToast");
-      //This bootstrap constructor shows or hides the toast
       var toast = new bootstrap.Toast(toastEl);
       toast.show();
-
-      // alert(data.message)
       setTimeout(function () {
         location.href = "/pages/aoDash.html";
       }, 300);
@@ -258,12 +254,6 @@ async function addFarmer(event) {
     console.log(error);
   }
 }
-
-// var submitBtn = document.getElementById("submitbutton");
-// submitBtn.addEventListener("click", addFarmer);
-
-//  document.getElementById("submitbutton");
-// submitButton.addEventListener("click", getAllFarmers);
 
 fetch("http://localhost:4000/api/auth/farmers/", {
   method: "GET",
@@ -274,6 +264,7 @@ fetch("http://localhost:4000/api/auth/farmers/", {
 })
   .then((response) => response.json())
   .then((data) => {
+    console.log(data)
     let tabledata = "";
     data.data.map((item) => {
       tabledata += `<tr>
@@ -286,7 +277,7 @@ fetch("http://localhost:4000/api/auth/farmers/", {
           <td>${item?.activities}</td>
           <td>${item?.periodofstay}</td>   
           <td>${item?.ward}</td>
-          <td>${item?.role}</td>
+          <td>${item?.role}</td> 
           <td><button type="button" id="${item?.id}" data-bs-toggle="modal" data-bs-target="#exampleModal11">
           <i class="bi bi-trash" style="color: red; outline:none;"></i>
         </button>
@@ -299,46 +290,35 @@ fetch("http://localhost:4000/api/auth/farmers/", {
   })
   .catch((error) => console.log(error));
 
-
 const deleteButton = document.getElementById("deleteFarmers");
 deleteButton.addEventListener("click", deletef);
 
 async function deletef(event, id) {
-  console.log('////////', id);
   event.preventDefault();
   try {
-    const response = await fetch(`http://localhost:4000/api/auth/farmer/${item?.id}`, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json'
+    const response = await fetch(
+      `http://localhost:4000/api/auth/farmer/${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
       }
-    })
+    );
     const data = await response.json();
     console.log(data);
   } catch (error) {
-    console.error('Error deleting user:', error);
+    console.error("Error deleting user:", error);
   }
 }
 
-// Get a reference to the table
-const table = document.getElementById("farmersTable");
+// const table = document.getElementById("farmersTable");
 
-// Add an event listener to the table
-table.addEventListener("click", function(event) {
-  // Check if the clicked element is a delete button
-  if (event.target.classList.contains("deleteBtn")) {
-    // Get the row to be deleted
-    const row = event.target.closest("tr");
-    
-    // Remove the row from the table
-    row.remove();
-  }
-});
-
-// onClick="deletef('${item?.id}')"
-
-
-
-
-
-
+// // Add an event listener to the table
+// table.addEventListener("click", function(event) {
+//   // Check if the clicked element is a delete button
+//   if (event.target.classList.contains("deleteBtn")) {
+//     const row = event.target.closest("tr");
+//     row.remove();
+//   }
+// });
