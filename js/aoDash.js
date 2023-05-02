@@ -231,6 +231,8 @@ async function addFarmer(event) {
       body: JSON.stringify({
         firstname: firstname,
         lastname: lastname,
+        email: email,
+        password:password,
         Phonenumber: phonenumber,
         NIN: NIN,
         DOB: DOB,
@@ -272,6 +274,8 @@ fetch("http://localhost:4000/api/auth/farmers/", {
       tabledata += `<tr>
           <td>${item?.firstname}</td>
           <td>${item?.lastname}</td>
+          <td>${item?.email}</td>
+          <td>${item?.password}</td>
           <td>${item?.Phonenumber}</td>
           <td>${item?.NIN}</td>
           <td>${item?.DOB}</td>
@@ -281,10 +285,10 @@ fetch("http://localhost:4000/api/auth/farmers/", {
           <td>${item?.ward}</td>
           <td>${item?.role}</td> 
           <td><button type="button" class=btn btn id="${item?.id}" data-bs-toggle="modal" data-bs-target="#exampleModal11">
-          <i class="bi bi-trash" style="color: red; outline:none; font-size:20px;"></i>
+          <i class="bi bi-trash-fill" style="color:red; outline:none; font-size:20px;" ></i>
         </button>
         </td>
-          <td><i class="bi bi-pencil-square"></i></td>
+        <td><button type="button" class=btn btn ><i class="bi bi-pencil-square" style="color:darkgreen; outline:none; font-size:20px;"></i></button></td>
         </tr>`;
     });
 

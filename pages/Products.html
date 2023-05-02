@@ -23,6 +23,43 @@
     <nav class="navbar bg-body-tertiary sticky-top">
       <div class="container-fluid">
         <h1 class="logo"><span>| U</span>-Farm</h1>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+          style="background-color: white; width: 300px"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            
+            <a href="../index.html">
+              <button type="button" class="btn btn-success">
+                <i class="bi bi-power" style="color:red;"></i> LOGOUT
+              </button>
+            </a>
+          </div>
+        </div>
       </div>
     </nav>
     <!-- Navbar ends here -->
@@ -88,7 +125,8 @@
           <h3>Chicken</h3>
           <p>Unit Price: UGX:18,000.0</p>
           <h4>Poultry</h4>
-          <p>Qty: 1</p>
+          <p>Qty: 1 </p>
+          <button type="submit" class="btn btn-success"><i class="bi bi-cart-fill"></i></button>
 
         </div>
         <div class="card">
