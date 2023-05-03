@@ -8,7 +8,7 @@ async function addProduct(event) {
     event.preventDefault();
     let name= document.getElementById('name').value;
     let price = document.getElementById('price').value;
-    let image = document.getElementById('uploadimage').value;
+    // let image = document.getElementById('uploadimage').value;
     let category = document.getElementById('category').value;
     let quantity= document.getElementById('quantity').value;
 
@@ -21,11 +21,11 @@ async function addProduct(event) {
             },
             mode: 'cors',
             body: JSON.stringify({
-                "name": name,
-                "price": price,
-                "image": image,
-                "category": category,
-                "quantity": quantity,
+                name: name,
+                price: price,
+                // image: image,
+                category: category,
+                quantity: quantity,
             })
         })
         const data = await response.json()
@@ -33,7 +33,7 @@ async function addProduct(event) {
         if (data.status == 201) {
             alert(data.message)
             //close modal
-            setTimeout(function(){location.href="/Auth/Products.html"} , 200);
+            setTimeout(function(){location.href="/pages/ufProducts.html"} , 200);
         }
 
     } catch (error) {

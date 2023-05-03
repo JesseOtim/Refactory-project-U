@@ -337,7 +337,7 @@ async function deletef(event, id) {
   event.preventDefault();
   try {
     const response = await fetch(
-      `http://localhost:4000/api/auth/farmer/${id}`,
+      `http://localhost:4000/api/auth/farmer/645210f5a365beda065eb7c3`,
       {
         method: "DELETE",
         headers: {
