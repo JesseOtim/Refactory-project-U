@@ -45,14 +45,15 @@ form {
   align-items: center;
 }
 
-form label {
+/* form label {
   display: flex;
   margin-top: 20px;
   font-size: 18px;
-}
+} */
 
-form input {
-  width: 424px;
+
+.form-control{
+  width: 422px;
   padding: 7px;
   border: none;
   border: 1px solid grey;

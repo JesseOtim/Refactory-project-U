@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/Products.css" rel="stylesheet" />
+    <title>Products</title>
+  </head>
+
+  <body>
+    <!-- Navbar starts here -->
+    <nav class="navbar bg-body-tertiary sticky-top">
+      <div class="container-fluid">
+        <h1 class="logo"><span>| U</span>-Farm</h1>
+      </div>
+    </nav>
+    <!-- Navbar ends here -->
+
+    <!-- starts here  -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Add Product</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+      
+          <div class="modal-body">
+            <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6">
+              <label for="validationCustom01" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" required>
+              <div class="invalid-feedback">
+                Please fill in your first name.
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustom02" class="form-label">Price</label>
+              <input type="number" class="form-control" id="price" required>
+              <div class="invalid-feedback">
+                Please add a price.
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+              <label for="validationCustom03" class="form-label">Image</label>
+              <input type="file" class="form-control" id="productimage" required>
+              <div class="invalid-feedback">
+                Please add an image.
+              </div>
+            </div>   
+            <div class="col-md-6">
+              <label for="validationCustom04" class="form-label">Category</label>
+              <select class="form-select" id="category" required>
+                <option >Choose...</option>
+                <option>Horticulture</option>
+                <option>Produce</option>
+                <option>Dairy</option>
+                <option>Poultry</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a category.
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustom05" class="form-label">Quantity</label>
+              <input type="tel" class="form-control" id="quantity" required>
+              <div class="invalid-feedback">
+                Please provide a Phonenumber.
+              </div>
+            </div>
+            <div class="col-12">
+              <button id="submitbutton"  class="btn btn-success" type="submit">Submit</button>
+            </div>
+            <!-- <form name="register" id="register-form" action="/register" method="POST">
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="inputEmail4" class="form-label">Name</label>
+                  <input type="name" class="form-control" id="name" />
+                  <small id="nameErr"></small>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputPassword4" class="form-label">Price</label>
+                  <input type="number" class="form-control" id="price" />
+                  <small id="priceErr"></small>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="inputAddress2" class="form-label">Upload image</label>
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="uploadimage"
+                    placeholder=""
+                  />
+                  <small id="uploadimageErr"></small>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="inputState" class="form-label">Category</label>
+                  <select id="category" class="form-select">
+                    <option>Select</option>
+                    <option>Horticulture</option>
+                    <option>Poultry</option>
+                    <option>Dairy</option>
+                    <option>Produce</option>
+                  </select>
+                  <small id="categoryErr"></small>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="inputAddress2" class="form-label">Quantity</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="quantity"
+                    placeholder=""
+                  />
+                  <small id="quantityErr"></small>
+                </div>
+              </div>
+            </form> -->
+          </div>
+         
+        </form>
+          <!-- <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-success" id="submitbutton">
+              Submit
+            </button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="d-grid gap-2 d-md-block">
+      <button
+        class="btn btn-success"
+        type="button"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        <i class="bi bi-plus-lg"></i> Product
+      </button>
+    </div>
+
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div
+          id="liveToast"
+          class="toast"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+        <!-- Changed background to green (bg-succcess) and text white-->
+          <div class="toast-header bg-success text-white">
+            <strong class="me-auto">Success</strong>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="toast-body">Logged in Successfully.</div>
+        </div>
+      </div>
+
+    <section class="product-category">
+      <h2>Products</h2>
+      <p>We offer a wide variety of quality products, including:</p>
+      <div class="card-container" id="product-container">
+        <div class="card">
+          <img src="../images/FRUITS.jpg" alt="Fruits" id="productimage"/>
+          <h3 id="Bananas">Bananas</h3>
+          <p>Unit Price: UGX:5,000.0</p>
+          <h4>Horticulture</h4>
+          <p>Qty: 1 Bunch</p>
+
+          <div class="icon-container">
+            <button id="btn" class="delete-btn"><i class="bi bi-trash" style="color: red"></i></button>
+            <button id="btn" class="edit-btn"><i class="bi bi-pencil-square"></i></button>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="../images/markus-spiske-VEGETABLES-unsplash.jpg"
+            alt="Vegetables"
+          />
+          <h3>Tomatoes</h3>
+          <p>Unit Price: UGX:3,000.0</p>
+          <h4>Horticulture</h4>
+          <p>Qty: 1 kg</p>
+
+          <div class="icon-container">
+            <button id="btn" class="delete-btn"><i class="bi bi-trash" style="color: red"></i></button>
+            <button id="btn" class="edit-btn"><i class="bi bi-pencil-square"></i></button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../images/daniel-bernard-HERBS-unsplash.jpg" alt="Herbs" />
+          <h3>Basil</h3>
+          <p>Unit Price: UGX:9,000.0</p>
+          <h4>Horticulture</h4>
+          <p>Qty: 1 Cup</p>
+
+          <div class="icon-container">
+              <button id="btn"><i class="bi bi-trash" style="color: red"></i></button>
+              <button id="btn"><i class="bi bi-pencil-square"></i></button>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="../images/hotchicksing-MANGOES-unsplash.jpg"
+            alt="Flowers"
+          />
+          <h3>Mangoes</h3>
+          <p>Unit Price:20,000.0</p>
+          <h4>Horticulture</h4>
+          <p>Qty: 1 kg</p>
+
+          <div class="icon-container">
+            <button id="btn"><i class="bi bi-trash" style="color: red"></i></button>
+            <button id="btn"><i class="bi bi-pencil-square"></i></button>      
+          </div>
+        </div>
+      </div>
+      <!-- <p>Click <a href="../Auth/login.html">here</a> to place an order.</p> -->
+    </section>
+
+    <section class="product-category">
+      <div class="card-container">
+        <div class="card">
+          <img src="../images/alexas_fotos-CHICKEN HEAD-unsplash.jpg" />
+          <h3>Chicken</h3>
+          <p>Unit Price: UGX:18,000.0</p>
+          <h4>Poultry</h4>
+          <p>Qty: 1</p>
+
+          <div class="icon-container">
+            <button id="btn"><i class="bi bi-trash" style="color: red"></i></button>
+            <button id="btn"><i class="bi bi-pencil-square"></i></button>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="../images/ruth-caron-turkeys-unsplash.jpg"
+            alt="Vegetables"
+          />
+          <h3>Turkey</h3>
+          <p>Unit Price: UGX:30,000.0</p>
+          <h4>Poultry</h4>
+          <p>Qty: 1</p>
+
+          <div class="icon-container">
+            <button id="btn"><i class="bi bi-trash" style="color: red"></i></button>
+            <button id="btn"><i class="bi bi-pencil-square"></i></button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../images/erol-ahmed-eggs-unsplash.jpg" alt="Herbs" />
+          <h3>Eggs</h3>
+          <p>Unit Price: UGX:13,000.0</p>
+          <h4>Poultry</h4>
+          <p>Qty: 1 Tray</p>
+
+          <div class="icon-container">
+            <button id="btn"><i class="bi bi-trash" style="color: red"></i></button>
+            <button id="btn"><i class="bi bi-pencil-square"></i></button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../images/Guinea-Fowls.jpg" alt="Flowers" />
+          <h3>Guinea fouls</h3>
+          <p>Unit Price: UGX:25,000.0</p>
+          <h4>Poultry</h4>
+          <p>Qty: 1</p>
+
+          <div class="icon-container">
+            <button id="btn"><i class="bi bi-trash" style="color: red"></i></button>
+            <button id="btn"><i class="bi bi-pencil-square"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- <p>Click <a href="../Auth/login.html">here</a> to place an order.</p> -->
+    </section>
+
+    <section class="product-category">
+      <div class="card-container">
+        <div class="card">
+          <img src="../images/MILK.jpg" />
+          <h3>Milk</h3>
+          <p>Unit Price: UGX:2,000.0</p>
+          <h4>Dairy</h4>
+          <p>Qty: 1 ltr </p>
+
+          <div class="icon-container">
+            <button id="btn"><i class="bi bi-trash" style="color: red"></i></button>
+            <button id="btn"><i class="bi bi-pencil-square"></i></button>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="../images/katrin-leinfellner-CHEESE-unsplash.jpg"
+            alt="Vegetables"
+          />
+          <h3>Cheese</h3>
+          <p>Unit Price: UGX:30,000.0</p>
+          <h4>Dairy</h4>
+          <p>Qty: 1</p>
+
+          <div class="icon-container">
+            <button id="btn"><i class="bi bi-trash" style="color: red"></i></button>
+            <button id="btn"><i class="bi bi-pencil-square"></i></button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../images/YOGHURT 2.jpg" alt="Herbs" />
+          <h3>Yoghurt</h3>
+          <p>Unit Price: UGX:13,000.0</p>
+          <h4>Dairy</h4>
+          <p>Qty: 1 Tray</p>
+
+          <div class="icon-container">
+            <button id="btn"><i class="bi bi-trash" style="color: red"></i></button>
+            <button id="btn"><i class="bi bi-pencil-square"></i></button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../images/BUTTER.webp" alt="Flowers" />
+          <h3>Butter</h3>
+          <p>Unit Price: UGX:25,000.0</p>
+          <h4>Dairy</h4>
+          <p>Qty: 1</p>
+
+          <div class="icon-container">
+            <button id="btn"><i class="bi bi-trash" style="color: red"></i></button>
+            <button id="btn"><i class="bi bi-pencil-square"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- <p>Click <a href="../Auth/login.html">here</a> to place an order.</p> -->
+    </section>
+
+    <section class="product-category">
+      <div class="card-container">
+        <div class="card">
+          <img src="../images/CORN.jpg" />
+          <h3>Maize</h3>
+          <p>Unit Price: UGX:1,000.0</p>
+          <h4>Produce</h4>
+          <p>Qty: 1 </p>
+
+          <div class="icon-container">
+            <button id="btn"><i class="bi bi-trash" style="color: red"></i></button>
+            <button id="btn"><i class="bi bi-pencil-square"></i></button>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="../images/SOYBEANS.jpg"
+            alt="Vegetables"
+          />
+          <h3>Soybeans</h3>
+          <p>Unit Price: UGX:8,000.0</p>
+          <h4>Produce</h4>
+          <p>Qty: 1 kg</p>
+
+          <div class="icon-container">
+            <button id="btn"><i class="bi bi-trash" style="color: red"></i></button>
+            <button id="btn"><i class="bi bi-pencil-square"></i></button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../images/WHEAT.jpg" alt="Herbs" />
+          <h3>Wheat</h3>
+          <p>Unit Price: UGX:5,000.0</p>
+          <h4>Produce</h4>
+          <p>Qty: 1 kg</p>
+
+          <div class="icon-container">
+            <button id="btn"><i class="bi bi-trash" style="color: red"></i></button>
+            <button id="btn"><i class="bi bi-pencil-square"></i></button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../images/RICE.jpg" alt="Flowers" />
+          <h3>Rice</h3>
+          <p>Unit Price: UGX:5,500.0</p>
+          <h4>Produce</h4>
+          <p>Qty: 1 kg</p>
+
+          <div class="icon-container">
+            <button id="btn"><i class="bi bi-trash" style="color: red"></i></button>
+            <button id="btn"><i class="bi bi-pencil-square"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Delete</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Are you sure you want to delete this product
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+              <button type="submit" class="btn btn-danger" id="deleteProduct">Yes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal ends -->
+
+
+
+      <script src="../js/Products.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="../js/validation.js"></script> -->
+  </body>
+</html>

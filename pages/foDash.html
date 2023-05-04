@@ -64,15 +64,12 @@
                   >Dashboard</a
                 >
               </li>
-              <li class="nav-item">
-                <a class="nav-link " href="../pages/foProfile.html"><i class="bi bi-person-circle" style="color: darkgreen"></i> Profile</a>
-              </li>
+
               <li class="nav-item">
                 <a
                   class="nav-link"
-                  href="../pages/foUsers.html"
-                  ><i class="bi bi-r-circle" style="color: darkgreen"></i>
-                  Users</a
+                  href="../pages/foProducts.html"
+                  ><i class="bi bi-box-fill" style="color: orangered"></i> Products</a
                 >
               </li>
 
@@ -106,7 +103,7 @@
       data-bs-whatever="@fat"
       id="button"
     >
-      <i class="bi bi-plus-lg"></i> User
+      <i class="bi bi-plus-lg"></i> UrbanFarmer
     </button>
 
     <h2>Farmer One</h2>
@@ -142,23 +139,27 @@
     </div>
 
     <!-- Contents end here -->
-
-     <!-- Chart.js -->
-     <div class="container-fluid">
-      <div class="row" id="card5">
-        <div class="col-xl-8">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Sales</h5>
-              <canvas id="myChart"></canvas>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-    <!-- Chart Ends -->
-
+        <!-- table -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+              <th>Password</th>
+              <th>Phonenumber</th>
+              <th>National ID</th>
+              <th>Date of Birth</th>
+              <th>Date of Registration</th>
+              <th>Activities</th>
+              <th>Ward</th>
+              <th>Role</th>
+            </tr>
+          </thead>
+          <tbody id="tablebody"></tbody>
+        </table>
+    
+        <!-- Table Data -->
      <!-- Table Data -->
     
   
@@ -181,8 +182,109 @@
               ></button>
             </div>
             <div class="modal-body">
-              <form name="form" action="" onsubmit="return ValidatemyForm(event)"
-              method="POST">
+              <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-6">
+                  <label for="validationCustom01" class="form-label">First name</label>
+                  <input type="text" class="form-control" id="firstname" required>
+                  <div class="invalid-feedback">
+                    Please fill in your first name.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom02" class="form-label">Last name</label>
+                  <input type="text" class="form-control" id="lastname" required>
+                  <div class="invalid-feedback">
+                    Please fill in your last name.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom03" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" required>
+                  <div class="invalid-feedback">
+                    Please provide an email.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom04" class="form-label">Password</label>
+                  <input type="text" class="form-control" id="password" required>
+                  <div class="invalid-feedback">
+                    Please provide a provide.
+                  </div>
+                </div>
+              
+                <div class="col-md-6">
+                  <label for="validationCustom05" class="form-label">NIN</label>
+                  <input type="text" class="form-control" id="NIN" required>
+                  <div class="invalid-feedback">
+                    Please provide a NIN.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom06" class="form-label">Phonenumber</label>
+                  <input type="tel" class="form-control" id="phonenumber" required>
+                  <div class="invalid-feedback">
+                    Please provide a Phonenumber.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom07" class="form-label">Date of Birth</label>
+                  <input type="date" class="form-control" id="dob" required>
+                  <div class="invalid-feedback">
+                    Please provide a date of birth.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom08" class="form-label">Date of Registration</label>
+                  <input type="date" class="form-control" id="dor" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid registration date.
+                  </div>
+                </div>
+               
+                <div class="col-md-6">
+                  <label for="validationCustom09" class="form-label">Activities</label>
+                  <select class="form-select" id="activities" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>Inspect</option>
+                    <option></option>
+                    <option>Register</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a residence type.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom10" class="form-label">Ward</label>
+                  <select class="form-select" id="ward" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a ward.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom11" class="form-label">Ward</label>
+                  <select class="form-select" id="role" required>
+                    <option selected disabled value="">...</option>
+                    <option>urbanFarmer</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a ward.
+                  </div>
+                </div>
+                
+              
+                
+                <div class="col-12">
+                  <button class="btn btn-success" type="submit" id="submitbutton">Submit</button>
+                </div>
+              </form>
+
+              <!-- <form >
   
                 <div class="row">
                   <div class="col-md-6">
@@ -266,7 +368,52 @@
   
                 
                 </div>
-              </form>
+              </form> -->
+            </div>
+            <!-- <div class="modal-footer"> -->
+              <!-- <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button> -->
+              <!-- <button type="submit" class="btn btn-success">Register</button> -->
+              <!-- <input  type="submit" class="btn btn-success"  value="Submit" > -->
+            <!-- </div> -->
+           </div>
+         </div>
+       </div>
+    
+    </div>
+
+        <!-- DELETE MODAL -->
+        <div
+        class="modal fade"
+        id="exampleModal13"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1
+                class="modal-title fs-5"
+                id="exampleModalLabel"
+                style="color: red"
+              >
+                Delete
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" style="font-weight: bold">
+              Are you sure you want to delete this farmer
             </div>
             <div class="modal-footer">
               <button
@@ -274,25 +421,26 @@
                 class="btn btn-secondary"
                 data-bs-dismiss="modal"
               >
-                Close
+                No
               </button>
-              <!-- <button type="submit" class="btn btn-success">Register</button> -->
-              <input  type="submit" class="btn btn-success"  value="Submit" >
-             </div>
-           </div>
-         </div>
-       </div>
-    
-    </div>
+              <button type="submit" class="btn btn-danger" id="deleteFarmers">
+                Yes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- DELETE MODAL  -->
+
+
   
       <!-- Table Data ends -->
-  
-     <script src="../js/foDash.js"></script>
+      <script src="../js/foDash.js"></script>
+     <script src="../js/validation.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    <script src="../js/lineChart.js"></script>
   </body>
 </html>
