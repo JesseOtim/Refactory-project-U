@@ -166,3 +166,39 @@ ol li:hover{
  color: blue;
 }
 
+@media (max-width: 767px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  h1{
+    font-size:30px;
+    margin-top:30px;
+  }
+
+  h2{
+    color:black;
+  }
+
+  ul li {
+    margin-left: 20px;
+  }
+
+  .centered {
+    top: 50%;
+    font-size: 14px;
+  }
+
+  .container p {
+    font-size: 16px;
+  }
+
+  .icons a i {
+    padding-left: 10px;
+    margin-top: 20px;
+  }
+
+  ol li {
+    margin-top: 10px;
+  }
+}
