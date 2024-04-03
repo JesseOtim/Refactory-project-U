@@ -184,8 +184,6 @@ ol li:hover{
     margin-left: 20px;
   }
 
-
-
   .centered {
     top: 50%;
     font-size: 14px;
@@ -203,4 +201,13 @@ ol li:hover{
   ol li {
     margin-top: 10px;
   }
+   #P{
+    color:black;
+   }
+
+   img{
+    width:100%;
+    height:auto;
+   }
+  
 }
