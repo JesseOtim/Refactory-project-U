@@ -122,13 +122,13 @@ p {
   color: white;
 } */
 
-#farm{
+#farm {
   margin-top: 20px;
   background-color: black;
   color: white;
 }
 
-.farm{
+.farm {
   color: darkgreen;
 }
 
@@ -148,7 +148,7 @@ h4 {
 }
 
 .icons a {
-  text-decoration:none;
+  text-decoration: none;
 }
 
 .icons a i {
@@ -158,12 +158,12 @@ h4 {
 }
 
 ol li {
-  margin-top: 15px; 
+  margin-top: 15px;
   cursor: pointer;
 }
 
-ol li:hover{
- color: blue;
+ol li:hover {
+  color: blue;
 }
 
 @media (max-width: 767px) {
@@ -171,13 +171,14 @@ ol li:hover{
     font-size: 20px;
   }
 
-  h1{
-    font-size:30px;
-    margin-top:30px;
+  h1 {
+    font-size: 30px;
+    margin-top: 30px;
   }
 
-  h2{
-    color:black;
+  h2 {
+    color: black;
+    font-weight: bold;
   }
 
   ul li {
@@ -201,13 +202,22 @@ ol li:hover{
   ol li {
     margin-top: 10px;
   }
-   #P{
-    color:black;
-   }
+  #P {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+  }
 
-   img{
-    width:100%;
-    height:auto;
-   }
-  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  #H {
+    margin-top: 50px;
+  }
+
+  .container {
+    background-color: aquamarine;
+    margin-bottom: 50px;
+  }
 }
