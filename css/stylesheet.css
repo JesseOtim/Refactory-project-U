@@ -72,6 +72,7 @@ ul li a:hover {
   color: white;
   font-size: 20px;
   font-weight: bold;
+  margin-top: 20px;
 }
 
 img {
@@ -88,13 +89,16 @@ h1 {
 .header {
   font-size: 35px;
   font-weight: bold;
+  margin-top: 15px;
 }
 
 h2 {
   font-weight: bold;
 }
 
-
+#H{
+  margin-top: 40px;
+}
 
 p {
   font-size: 18px;
@@ -172,7 +176,7 @@ ol li {
 ol li:hover {
   color: blue;
 }
-#cf img{
+#cf img {
   border-radius: 15px;
 }
 
@@ -187,7 +191,6 @@ ol li:hover {
   h1 {
     font-size: 30px;
     margin-top: 30px;
-    
   }
 
   h2 {
@@ -195,24 +198,25 @@ ol li:hover {
     font-weight: bold;
   }
 
-  .header{
+  .header {
     font-size: 32px;
   }
 
-  .header, h2{
+  .header,
+  h2 {
     margin-bottom: -8px;
   }
 
-  .container-fluid p{
+  .container-fluid p {
     color: white;
   }
 
-  #container-fluid h2{
+  #container-fluid h2 {
     color: darkgreen;
     margin-bottom: 16px;
   }
 
-  #container-fluid #HTWO{
+  #container-fluid #HTWO {
     color: orangered;
   }
   ul li {
@@ -224,12 +228,12 @@ ol li:hover {
     font-size: 14px;
   }
   /* col text-center */
-  .container div  {
+  .container div {
     background-color: rgb(69, 43, 9);
   }
 
-  .container h2{
-    color:orangered;
+  .container h2 {
+    color: orangered;
     margin-top: 10px;
     margin-bottom: 16px;
   }
@@ -238,7 +242,6 @@ ol li:hover {
     font-size: 16px;
     color: black;
     font-weight: bold;
-   
   }
 
   .icons a i {
