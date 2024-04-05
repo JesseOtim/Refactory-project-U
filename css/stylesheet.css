@@ -24,6 +24,10 @@ span {
   color: orangered;
 }
 
+.header span1 {
+  color: green;
+}
+
 .menu {
   height: 40px;
 }
@@ -86,14 +90,15 @@ h1 {
 }
 
 .header {
-  font-size: 25px;
+  font-size: 35px;
   font-weight: bold;
 }
 
 h2 {
   font-weight: bold;
- 
 }
+
+
 
 p {
   font-size: 18px;
@@ -149,7 +154,7 @@ h4 {
   padding-left: 40px;
 }
 
-.icons{
+.icons {
   margin-bottom: 12px;
 }
 
@@ -173,6 +178,9 @@ ol li:hover {
 }
 
 @media (max-width: 767px) {
+  body {
+    background-color: #181a1b;
+  }
   .logo {
     font-size: 20px;
   }
@@ -187,6 +195,17 @@ ol li:hover {
     font-weight: bold;
   }
 
+  .container-fluid p{
+    color: white;
+  }
+
+  #container-fluid h2{
+    color: darkgreen;
+  }
+
+  #container-fluid #HTWO{
+    color: orangered;
+  }
   ul li {
     margin-left: 20px;
   }
@@ -195,9 +214,20 @@ ol li:hover {
     top: 50%;
     font-size: 14px;
   }
+  /* col text-center */
+  .container div  {
+    background-color: rgb(69, 43, 9);
+  }
+
+  .container h2{
+    color:orangered;
+  }
 
   .container p {
     font-size: 16px;
+    color: black;
+    font-weight: bold;
+   
   }
 
   .icons a i {
@@ -224,15 +254,15 @@ ol li:hover {
   }
 
   .container {
-    background-color:antiquewhite;
+    background-color: antiquewhite;
     margin-bottom: 50px;
   }
 
-  #cf{
+  #cf {
     margin-top: 10px;
   }
 
-  #cf img{
+  #cf img {
     border-radius: 15%;
   }
 }
