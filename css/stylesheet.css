@@ -24,10 +24,6 @@ span {
   color: orangered;
 }
 
-.header span1 {
-  color: green;
-}
-
 .menu {
   height: 40px;
 }
@@ -191,11 +187,20 @@ ol li:hover {
   h1 {
     font-size: 30px;
     margin-top: 30px;
+    
   }
 
   h2 {
     color: black;
     font-weight: bold;
+  }
+
+  .header{
+    font-size: 32px;
+  }
+
+  .header, h2{
+    margin-bottom: -8px;
   }
 
   .container-fluid p{
@@ -204,6 +209,7 @@ ol li:hover {
 
   #container-fluid h2{
     color: darkgreen;
+    margin-bottom: 16px;
   }
 
   #container-fluid #HTWO{
@@ -224,6 +230,7 @@ ol li:hover {
 
   .container h2{
     color:orangered;
+    margin-bottom: 16px;
   }
 
   .container p {
@@ -245,6 +252,7 @@ ol li:hover {
     color: white;
     font-size: 16px;
     font-weight: bold;
+    display: none;
   }
 
   img {
@@ -253,12 +261,12 @@ ol li:hover {
     border-radius: 8%;
   }
   #H {
-    margin-top: 50px;
+    margin-top: 78px;
   }
 
   .container {
     background-color: antiquewhite;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   #cf {
