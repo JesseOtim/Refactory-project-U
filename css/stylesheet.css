@@ -212,6 +212,7 @@ ol li:hover {
   img {
     width: 100%;
     height: auto;
+    border-radius: 8%;
   }
   #H {
     margin-top: 50px;
@@ -220,5 +221,13 @@ ol li:hover {
   .container {
     background-color:antiquewhite;
     margin-bottom: 50px;
+  }
+
+  #cf{
+    margin-top: 10px;
+  }
+
+  #cf img{
+    border-radius: 15%;
   }
 }
