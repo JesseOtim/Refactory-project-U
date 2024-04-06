@@ -1,91 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link href="../css/bootstrap.css" rel="stylesheet" />
-    <link href="../css/signup.css" rel="stylesheet" />
-    <title>U-Farm</title>
-  </head>
 
-  <body>
-    <div class="container-main">
-      <div class="row">
-        <div class="col-md-4">
-          <img src="../images/annie-spratt-lady walking.jpg" />
-        </div>
-        <div class="col-md-6">
-          <div class="logInbox">
-            <h1 class="logo"><span>| U</span>-Farm</h1>
-            <form
-              name="signup"
-              id="form"
-              action=""
-              onsubmit="return ValidateForm(event);"
-              method="POST"
-            >
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../css/bootstrap.css" rel="stylesheet" />
+  <link href="../css/signup.css" rel="stylesheet" />
+  <title>U-Farm</title>
+</head>
+
+<body>
+  <div class="container-main">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../images/annie-spratt-lady walking.jpg" />
+      </div>
+      <div class="col-md-4 d-flex justify-content-center align-items-center">
+        <div class="logInbox">
+          <h1 class="logo"><span>| U</span>-Farm</h1>
+          <form name="signup" id="form" action="" onsubmit="return ValidateForm(event);" method="POST">
+            <div class="mb-3">
+              <label>First name</label>
+              <input type="Firstname" class="Firstname" id="firstname" size="50" placeholder="" name="firstname" />
+              <small id="firstnameErr"></small>
+              <label>Last name</label>
+              <input type="Lastname" class="Lastname" id="lastname" size="50" placeholder="" name="lastname" />
+              <small id="lastnameErr"></small>
+              <label>Email address</label>
+              <input type="email" class="email" id="email" size="50" placeholder="bayo@gmail.com" name="email" />
+              <small id="emailErr"></small>
+              <div class="text-danger font-weight-bold small"></div>
               <div class="mb-3">
-                <label>First name</label>
-                <input
-                  type="Firstname"
-                  class="Firstname"
-                  id="firstname"
-                  size="50"
-                  placeholder=""
-                  name="firstname"
-                />
-                <small id="firstnameErr"></small>
-                <label>Last name</label>
-                <input
-                  type="Lastname"
-                  class="Lastname"
-                  id="lastname"
-                  size="50"
-                  placeholder=""
-                  name="lastname"
-                />
-                <small id="lastnameErr"></small>
-                <label>Email address</label>
-                <input
-                  type="email"
-                  class="email"
-                  id="email"
-                  size="50"
-                  placeholder="bayo@gmail.com"
-                  name="email"
-                />
-                <small id="emailErr"></small>
+                <label>Password</label>
+                <input name="password" type="password" class="password" id="password" size="50" />
+                <small id="passwordErr"></small>
                 <div class="text-danger font-weight-bold small"></div>
-                <div class="mb-3">
-                  <label>Password</label>
-                  <input
-                    name="password"
-                    type="password"
-                    class="password"
-                    id="password"
-                    size="50"
-                  />
-                  <small id="passwordErr"></small>
-                  <div class="text-danger font-weight-bold small"></div>
-                  <label>Confirm password</label>
-                  <input
-                    type="password"
-                    class="password"
-                    id="confirmpassword"
-                    size="50"
-                  />
-                  <small id="confirmpasswordErr"></small>
-                  <div class="text-danger font-weight-bold small"></div>
-                </div>
+                <label>Confirm password</label>
+                <input type="password" class="password" id="confirmpassword" size="50" />
+                <small id="confirmpasswordErr"></small>
+                <div class="text-danger font-weight-bold small"></div>
               </div>
+            </div>
 
-              <!-- button from button sizes  -->
-              <!-- <button
+            <!-- button from button sizes  -->
+            <!-- <button
                 name="submit"
                 action=""
                 value="submit"
@@ -94,49 +54,34 @@
               >
                 SIGN UP
               </button> -->
-              <input
-                id="submitbutton"
-                type="submit"
-                class="btn btn-success"
-                value="Submit"
-              />
-              <p>
-                Already have an account?<a href="../Auth/login.html"> Login</a>
-              </p>
-              <p><a href="../index.html">< Home</a></p>
-            </form>
-          </div>
+            <input id="submitbutton" type="submit" class="btn btn-success" value="Submit" />
+            <p>
+              Already have an account?<a href="../Auth/login.html"> Login</a>
+            </p>
+            <p><a href="../index.html">
+                < Home</a>
+            </p>
+          </form>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="toast-container position-fixed top-0 end-0 p-3">
-      <div
-        id="liveToast"
-        class="toast"
-        role="alert"
-        aria-live="assertive"
-        aria-atomic="true"
-      >
-        <!-- Changed background to green (bg-success) and text white-->
-        <div class="toast-header bg-success text-white">
-          <strong class="me-auto">Success</strong>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="toast"
-            aria-label="Close"
-          ></button>
-        </div>
+  <div class="toast-container position-fixed top-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <!-- Changed background to green (bg-success) and text white-->
+      <div class="toast-header bg-success text-white">
+        <strong class="me-auto">Success</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
       </div>
     </div>
+  </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
-    <script src="../js/signupValidation.js"></script>
-    <script src="../js/signup.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="../js/signupValidation.js"></script>
+  <script src="../js/signup.js"></script>
+</body>
+
 </html>
