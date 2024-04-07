@@ -24,36 +24,26 @@ span {
   color: orangered;
 }
 
-.menu {
-  float: inline-start;
-  height: 40px;
+.offcanvas-body ul li {
+  padding-left: 20px;
 }
 
-ul {
-  float: left;
-  display: flex;
-}
-
-ul li {
-  margin-left: 70px;
-  margin-top: 20px;
-  font-size: 15px;
-}
-
-ul li a {
+.offcanvas-body ul li a {
   text-decoration: none;
-  color: black;
-  font-family: cursive;
   font-weight: bold;
-  transition: 0.4s ease;
 }
 
-ul li a:hover {
-  color: orangered;
+.offcanvas-body button {
+  float: left;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .button {
   margin-right: 20px;
+}
+.navbar-toggler{
+  margin: 0 ;
 }
 
 .product-category {
@@ -140,7 +130,7 @@ p a:hover {
 button {
   /* margin-left: 622px; */
   float: right;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-right: 10px;
 }
 

@@ -24,6 +24,7 @@ span {
 img {
   width: 700px;
   height: 700px;
+
 }
 
 .container-main {
@@ -42,6 +43,7 @@ form {
   margin-left: 100px;
   margin-bottom: 50px;
   align-items: center;
+
 }
 
 form label {
@@ -49,6 +51,7 @@ form label {
   margin-top: 5px;
   font-size: 18px;
 }
+
 
 form input {
   width: 424px;
