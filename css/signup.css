@@ -86,7 +86,7 @@ p {
     font-family: Arial, sans-serif;
     font-size: 20px;
     font-weight: bold;
-    background-color: #181a1b;
+    /* background-color: #181a1b; */
     overflow: hidden; /* Prevent horizontal overflow */
   }
 
@@ -115,8 +115,9 @@ p {
 
   h1 {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 40px;
     margin-right: 50px;
+    margin-bottom: -20px;
   }
 
   form {
@@ -130,9 +131,8 @@ p {
   }
 
   form label {
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 18px;
-    color: white;
   }
 
   form input {
