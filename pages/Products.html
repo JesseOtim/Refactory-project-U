@@ -1,268 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-    <link href="../css/bootstrap.css" rel="stylesheet" />
-    <link href="../css/Products.css" rel="stylesheet" />
-    <title>Products</title>
-  </head>
 
-  <body>
-    <!-- Navbar starts here -->
-    <nav class="navbar bg-body-tertiary sticky-top">
-      <div class="container-fluid">
-        <h1 class="logo"><span>| U</span>-Farm</h1>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <link href="../css/bootstrap.css" rel="stylesheet" />
+  <link href="../css/Products.css" rel="stylesheet" />
+  <title>Products</title>
+</head>
 
-        <div
-          class="offcanvas offcanvas-end"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-          style="background-color: white; width: 300px"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            
-            <a href="../index.html">
-              <button type="button" class="btn btn-success">
-                <i class="bi bi-power" style="color:red;"></i> LOGOUT
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- Navbar ends here -->
+<body>
+  <!-- Navbar starts here -->
+  <nav class="navbar bg-body-tertiary sticky-top">
+    <div class="container-fluid">
+      <h1 class="logo"><span>| U</span>-Farm</h1>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- starts here  -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"
+        style="background-color: white; width: 300px">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
 
-    <!-- Modal -->
-
-  
-
-    <section class="product-category">
-      <h2>Products</h2>
-      <p>We offer a wide variety of quality products, including:</p>
-      <div class="card-container">
-        <div class="card">
-          <img src="../images/FRUITS.jpg" alt="Fruits" />
-          <h3 id="Bananas">Bananas</h3>
-          <p>Unit Price: UGX:5,000.0</p>
-          <h4>Horticulture</h4>
-          <p>Qty: 1 Bunch</p>
-          <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn" style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill" style="color:white; font-size: 20px;"></i></button>
-        </div>
-        <div class="card">
-          <img
-            src="../images/markus-spiske-VEGETABLES-unsplash.jpg"
-            alt="Vegetables"
-          />
-          <h3>Tomatoes</h3>
-          <p>Unit Price: UGX:3,000.0</p>
-          <h4>Horticulture</h4>
-          <p>Qty: 1 kg</p>
-          <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn" style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill" style="color:white; font-size: 20px;"></i></button>
-         
-        </div>
-        <div class="card">
-          <img src="../images/daniel-bernard-HERBS-unsplash.jpg" alt="Herbs" />
-          <h3>Basil</h3>
-          <p>Unit Price: UGX:9,000.0</p>
-          <h4>Horticulture</h4>
-          <p>Qty: 1 Cup</p>
-          <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn" style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill" style="color:white; font-size: 20px;"></i></button>
-         
-        </div>
-        <div class="card">
-          <img
-            src="../images/hotchicksing-MANGOES-unsplash.jpg"
-            alt="Flowers"
-          />
-          <h3>Mangoes</h3>
-          <p>Unit Price:20,000.0</p>
-          <h4>Horticulture</h4>
-          <p>Qty: 1 kg</p>
-          <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn" style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill" style="color:white; font-size: 20px;"></i></button>
-        </div>
-      </div>
-      <!-- <p>Click <a href="../Auth/login.html">here</a> to place an order.</p> -->
-    </section>
-
-    <section class="product-category">
-      <div class="card-container">
-        <div class="card">
-          <img src="../images/alexas_fotos-CHICKEN HEAD-unsplash.jpg" />
-          <h3>Chicken</h3>
-          <p>Unit Price: UGX:18,000.0</p>
-          <h4>Poultry</h4>
-          <p>Qty: 1 </p>
-          <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn" style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill" style="color:white; font-size: 20px;"></i></button>
-         
-
-        </div>
-        <div class="card">
-          <img
-            src="../images/ruth-caron-turkeys-unsplash.jpg"
-            alt="Vegetables"
-          />
-          <h3>Turkey</h3>
-          <p>Unit Price: UGX:30,000.0</p>
-          <h4>Poultry</h4>
-          <p>Qty: 1</p>
-          <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn" style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill" style="color:white; font-size: 20px;"></i></button>
-        </div>
-        <div class="card">
-          <img src="../images/erol-ahmed-eggs-unsplash.jpg" alt="Herbs" />
-          <h3>Eggs</h3>
-          <p>Unit Price: UGX:13,000.0</p>
-          <h4>Poultry</h4>
-          <p>Qty: 1 Tray</p>
-          <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn" style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill" style="color:white; font-size: 20px;"></i></button>
-        </div>
-        <div class="card">
-          <img src="../images/Guinea-Fowls.jpg" alt="Flowers" />
-          <h3>Guinea fouls</h3>
-          <p>Unit Price: UGX:25,000.0</p>
-          <h4>Poultry</h4>
-          <p>Qty: 1</p>
-          <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn" style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill" style="color:white; font-size: 20px;"></i></button>
-        </div>
-      </div>
-
-      <!-- <p>Click <a href="../Auth/login.html">here</a> to place an order.</p> -->
-    </section>
-
-    <section class="product-category">
-      <div class="card-container">
-        <div class="card">
-          <img src="../images/MILK.jpg" />
-          <h3>Milk</h3>
-          <p>Unit Price: UGX:2,000.0</p>
-          <h4>Dairy</h4>
-          <p>Qty: 1 ltr </p>
-          <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn" style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill" style="color:white; font-size: 20px;"></i></button>
-        </div>
-        <div class="card">
-          <img
-            src="../images/katrin-leinfellner-CHEESE-unsplash.jpg"
-            alt="Vegetables"
-          />
-          <h3>Cheese</h3>
-          <p>Unit Price: UGX:30,000.0</p>
-          <h4>Dairy</h4>
-          <p>Qty: 1</p>
-          <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn" style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill" style="color:white; font-size: 20px;"></i></button>
-        </div>
-        <div class="card">
-          <img src="../images/YOGHURT 2.jpg" alt="Herbs" />
-          <h3>Yoghurt</h3>
-          <p>Unit Price: UGX:13,000.0</p>
-          <h4>Dairy</h4>
-          <p>Qty: 1 Tray</p>
-          <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn" style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill" style="color:white; font-size: 20px;"></i></button>
-        </div>
-        <div class="card">
-          <img src="../images/BUTTER.webp" alt="Flowers" />
-          <h3>Butter</h3>
-          <p>Unit Price: UGX:25,000.0</p>
-          <h4>Dairy</h4>
-          <p>Qty: 1</p>
-          <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn" style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill" style="color:white; font-size: 20px;"></i></button>
-        </div>
-      </div>
-
-      <!-- <p>Click <a href="../Auth/login.html">here</a> to place an order.</p> -->
-    </section>
-
-    <section class="product-category">
-      <div class="card-container">
-        <div class="card">
-          <img src="../images/CORN.jpg" />
-          <h3>Maize</h3>
-          <p>Unit Price: UGX:1,000.0</p>
-          <h4>Produce</h4>
-          <p>Qty: 1 </p>
-          <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn" style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill" style="color:white; font-size: 20px;"></i></button>
-        </div>
-        <div class="card">
-          <img
-            src="../images/SOYBEANS.jpg"
-            alt="Vegetables"
-          />
-          <h3>Soybeans</h3>
-          <p>Unit Price: UGX:8,000.0</p>
-          <h4>Produce</h4>
-          <p>Qty: 1 kg</p>
-          <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn" style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill" style="color:white; font-size: 20px;"></i></button>
-        </div>
-        <div class="card">
-          <img src="../images/WHEAT.jpg" alt="Herbs" />
-          <h3>Wheat</h3>
-          <p>Unit Price: UGX:5,000.0</p>
-          <h4>Produce</h4>
-          <p>Qty: 1 kg</p>
-          <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn" style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill" style="color:white; font-size: 20px;"></i></button>
-        </div>
-        <div class="card">
-          <img src="../images/RICE.jpg" alt="Flowers" />
-          <h3>Rice</h3>
-          <p>Unit Price: UGX:5,500.0</p>
-          <h4>Produce</h4>
-          <p>Qty: 1 kg</p>
-          <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn" style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill" style="color:white; font-size: 20px;"></i></button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Modal Popup starts-->
-    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalToggleLabel" style="color:orangered; font-weight: bold;">Cart</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body" style="font-weight: bold;">
-            Are you sure you want to add this to your Cart
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Yes</button>
-            <button class="btn btn-secondary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">No</button>
-          </div>
+          <a href="../index.html">
+            <button type="button" class="btn btn-success">
+              <i class="bi bi-power" style="color:red;"></i> LOGOUT
+            </button>
+          </a>
         </div>
       </div>
     </div>
-    <!-- <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  </nav>
+  <!-- Navbar ends here -->
+
+  <!-- starts here  -->
+
+  <!-- Modal -->
+
+
+
+  <section class="product-category">
+    <h2>Products</h2>
+    <p>We offer a wide variety of quality products, including:</p>
+    <div class="card-container">
+      <div class="card">
+        <img src="../images/FRUITS.jpg" alt="Fruits" />
+        <h3 id="Bananas">Bananas</h3>
+        <p>Unit Price: UGX:5,000.0</p>
+        <h4>Horticulture</h4>
+        <p>Qty: 1 Bunch</p>
+        <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn"
+          style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill"
+            style="color:white; font-size: 20px;"></i></button>
+      </div>
+      <div class="card">
+        <img src="../images/markus-spiske-VEGETABLES-unsplash.jpg" alt="Vegetables" />
+        <h3>Tomatoes</h3>
+        <p>Unit Price: UGX:3,000.0</p>
+        <h4>Horticulture</h4>
+        <p>Qty: 1 kg</p>
+        <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn"
+          style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill"
+            style="color:white; font-size: 20px;"></i></button>
+
+      </div>
+      <div class="card">
+        <img src="../images/daniel-bernard-HERBS-unsplash.jpg" alt="Herbs" />
+        <h3>Basil</h3>
+        <p>Unit Price: UGX:9,000.0</p>
+        <h4>Horticulture</h4>
+        <p>Qty: 1 Cup</p>
+        <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn"
+          style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill"
+            style="color:white; font-size: 20px;"></i></button>
+
+      </div>
+      <div class="card">
+        <img src="../images/hotchicksing-MANGOES-unsplash.jpg" alt="Flowers" />
+        <h3>Mangoes</h3>
+        <p>Unit Price:20,000.0</p>
+        <h4>Horticulture</h4>
+        <p>Qty: 1 kg</p>
+        <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn"
+          style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill"
+            style="color:white; font-size: 20px;"></i></button>
+      </div>
+    </div>
+    <!-- <p>Click <a href="../Auth/login.html">here</a> to place an order.</p> -->
+  </section>
+
+  <section class="product-category">
+    <div class="card-container">
+      <div class="card">
+        <img src="../images/alexas_fotos-CHICKEN HEAD-unsplash.jpg" />
+        <h3>Chicken</h3>
+        <p>Unit Price: UGX:18,000.0</p>
+        <h4>Poultry</h4>
+        <p>Qty: 1 </p>
+        <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn"
+          style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill"
+            style="color:white; font-size: 20px;"></i></button>
+
+
+      </div>
+      <div class="card">
+        <img src="../images/ruth-caron-turkeys-unsplash.jpg" alt="Vegetables" />
+        <h3>Turkey</h3>
+        <p>Unit Price: UGX:30,000.0</p>
+        <h4>Poultry</h4>
+        <p>Qty: 1</p>
+        <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn"
+          style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill"
+            style="color:white; font-size: 20px;"></i></button>
+      </div>
+      <div class="card">
+        <img src="../images/erol-ahmed-eggs-unsplash.jpg" alt="Herbs" />
+        <h3>Eggs</h3>
+        <p>Unit Price: UGX:13,000.0</p>
+        <h4>Poultry</h4>
+        <p>Qty: 1 Tray</p>
+        <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn"
+          style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill"
+            style="color:white; font-size: 20px;"></i></button>
+      </div>
+      <div class="card">
+        <img src="../images/Guinea-Fowls.jpg" alt="Flowers" />
+        <h3>Guinea fouls</h3>
+        <p>Unit Price: UGX:25,000.0</p>
+        <h4>Poultry</h4>
+        <p>Qty: 1</p>
+        <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn"
+          style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill"
+            style="color:white; font-size: 20px;"></i></button>
+      </div>
+    </div>
+
+    <!-- <p>Click <a href="../Auth/login.html">here</a> to place an order.</p> -->
+  </section>
+
+  <section class="product-category">
+    <div class="card-container">
+      <div class="card">
+        <img src="../images/MILK.jpg" />
+        <h3>Milk</h3>
+        <p>Unit Price: UGX:2,000.0</p>
+        <h4>Dairy</h4>
+        <p>Qty: 1 ltr </p>
+        <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn"
+          style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill"
+            style="color:white; font-size: 20px;"></i></button>
+      </div>
+      <div class="card">
+        <img src="../images/katrin-leinfellner-CHEESE-unsplash.jpg" alt="Vegetables" />
+        <h3>Cheese</h3>
+        <p>Unit Price: UGX:30,000.0</p>
+        <h4>Dairy</h4>
+        <p>Qty: 1</p>
+        <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn"
+          style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill"
+            style="color:white; font-size: 20px;"></i></button>
+      </div>
+      <div class="card">
+        <img src="../images/YOGHURT 2.jpg" alt="Herbs" />
+        <h3>Yoghurt</h3>
+        <p>Unit Price: UGX:13,000.0</p>
+        <h4>Dairy</h4>
+        <p>Qty: 1 Tray</p>
+        <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn"
+          style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill"
+            style="color:white; font-size: 20px;"></i></button>
+      </div>
+      <div class="card">
+        <img src="../images/BUTTER.webp" alt="Flowers" />
+        <h3>Butter</h3>
+        <p>Unit Price: UGX:25,000.0</p>
+        <h4>Dairy</h4>
+        <p>Qty: 1</p>
+        <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn"
+          style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill"
+            style="color:white; font-size: 20px;"></i></button>
+      </div>
+    </div>
+
+    <!-- <p>Click <a href="../Auth/login.html">here</a> to place an order.</p> -->
+  </section>
+
+  <section class="product-category">
+    <div class="card-container">
+      <div class="card">
+        <img src="../images/CORN.jpg" />
+        <h3>Maize</h3>
+        <p>Unit Price: UGX:1,000.0</p>
+        <h4>Produce</h4>
+        <p>Qty: 1 </p>
+        <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn"
+          style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill"
+            style="color:white; font-size: 20px;"></i></button>
+      </div>
+      <div class="card">
+        <img src="../images/SOYBEANS.jpg" alt="Vegetables" />
+        <h3>Soybeans</h3>
+        <p>Unit Price: UGX:8,000.0</p>
+        <h4>Produce</h4>
+        <p>Qty: 1 kg</p>
+        <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn"
+          style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill"
+            style="color:white; font-size: 20px;"></i></button>
+      </div>
+      <div class="card">
+        <img src="../images/WHEAT.jpg" alt="Herbs" />
+        <h3>Wheat</h3>
+        <p>Unit Price: UGX:5,000.0</p>
+        <h4>Produce</h4>
+        <p>Qty: 1 kg</p>
+        <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn"
+          style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill"
+            style="color:white; font-size: 20px;"></i></button>
+      </div>
+      <div class="card">
+        <img src="../images/RICE.jpg" alt="Flowers" />
+        <h3>Rice</h3>
+        <p>Unit Price: UGX:5,500.0</p>
+        <h4>Produce</h4>
+        <p>Qty: 1 kg</p>
+        <button type="submit" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="btn btn"
+          style="width:100%; background-color:orangered; outline:none;"><i class="bi bi-cart-fill"
+            style="color:white; font-size: 20px;"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Popup starts-->
+  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel" style="color:orangered; font-weight: bold;">Cart
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="font-weight: bold;">
+          Are you sure you want to add this to your Cart
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Yes</button>
+          <button class="btn btn-secondary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
@@ -278,15 +275,10 @@
         </div>
       </div>
     </div> -->
-    <!-- Modal Popup ends -->
+  <script src="../js/validation.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
 
-  
-
-    <script src="../js/validation.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
-  </body>
 </html>
