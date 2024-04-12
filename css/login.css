@@ -85,9 +85,9 @@ p {
 }
 
 @media (max-width: 767px) {
-  /* body {
+  body {
     background-color: #181a1b;
-  } */
+  }
   
 img {
   width: 100%;
