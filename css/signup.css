@@ -184,3 +184,31 @@ form input:focus {
     color: gray;
   }
 }
+
+@media (min-width: 2560px) {
+  .container-main { /* Assuming this is the parent container of the image */
+    overflow: hidden; /* Removes overflow from the container */
+  }
+
+  img {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Ensures the image covers the entire space */
+  }
+}
+
+@media (min-width: 1366px) and (max-width: 1366px) {
+  body, html {
+    overflow: hidden !important; /* Force removal of overflow */
+  }
+
+  .container-main { /* Parent container of the image */
+    overflow: hidden; /* Removes overflow from the container */
+  }
+
+  img {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Ensures the image covers the entire space */
+  }
+}
