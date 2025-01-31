@@ -59,6 +59,7 @@ form input {
   outline: none;
   background-color: transparent;
   color: white;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .btn {
@@ -83,6 +84,12 @@ p {
 form input::placeholder {
   color: gray;
   opacity: 1;
+}
+
+form input:focus {
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
 @media (max-width: 767px) {
