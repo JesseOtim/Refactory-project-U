@@ -187,20 +187,7 @@ const ValidatemyForm = () => {
   // male.addEventListener("change", function() {
   //   if (male.checked) {
   //     female.checked = false;
-  //   }else{
-  //     genderError.textcontent="";
-  //   }
-  // });
 
-  // if (!(female.checked || male.checked)) {
-  //   genderError.textContent = "Please select gender";
-  //   genderError.style =
-  //     "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-  //   error++;
-  //   return false;
-  // } else {
-  //   genderError.textContent = "";
-  // }
 
   if (error > 0) {
     stopImmediatePropagation();
