@@ -24,7 +24,6 @@ span {
 img {
   width: 700px;
   height: 700px;
-
 }
 
 .container-main {
@@ -43,7 +42,6 @@ form {
   margin-left: 100px;
   margin-bottom: 50px;
   align-items: center;
-
 }
 
 form label {
@@ -52,7 +50,6 @@ form label {
   font-size: 18px;
 }
 
-
 form input {
   width: 424px;
   padding: 7px;
@@ -60,6 +57,8 @@ form input {
   border: 1px solid grey;
   border-radius: 15px;
   outline: none;
+  background-color: transparent;
+  color: white;
 }
 
 .btn {
@@ -81,12 +80,17 @@ p {
   margin-left: 60px;
 }
 
+form input::placeholder {
+  color: gray;
+  opacity: 1;
+}
+
 @media (max-width: 767px) {
   body {
     font-family: Arial, sans-serif;
     font-size: 20px;
     font-weight: bold;
-    /* background-color: #181a1b; */
+    background-color: #181a1b;
     overflow: hidden; /* Prevent horizontal overflow */
   }
 
@@ -133,6 +137,7 @@ p {
   form label {
     margin-top: 10px;
     font-size: 18px;
+    color: white; /* Added to make form labels white */
   }
 
   form input {
@@ -161,9 +166,14 @@ p {
   p {
     text-align: center;
     font-size: 15px;
-    color: black;
+
+    color: white;
+
     margin-top: 10px;
     font-weight: bold;
   }
- 
+
+  form input::placeholder {
+    color: gray;
+  }
 }
