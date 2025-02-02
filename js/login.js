@@ -1,7 +1,6 @@
-
 var baseUrl = "http://localhost:3000/api/auth/";
 
-const submitButton = document.getElementById ("submitbutton");
+const submitButton = document.getElementById("submitbutton");
 submitButton.addEventListener("click", newLogin);
 
 async function newLogin(event) {
@@ -10,11 +9,10 @@ async function newLogin(event) {
   let password = document.getElementById("password").value;
 
   try {
-    console.log(email);
-    const response = await fetch (baseUrl + "login", {
+    const response = await fetch(baseUrl + "login", {
       method: "POST",
       headers: {
-        "content-type": "application/json",
+        "Content-Type": "application/json",
       },
       mode: "cors",
       body: JSON.stringify({
@@ -22,6 +20,7 @@ async function newLogin(event) {
         password: password,
       }),
     });
+    console.log(response);
     const data = await response.json();
     if (data.status == 200) {
       console.log(data.data.role, ">>>>>>>>>");
@@ -32,16 +31,16 @@ async function newLogin(event) {
       toast.show();
       // alert(data.message)
       setTimeout(function () {
-        if (data.data.role === 'agricOfficer'){
+        if (data.data.role === "agricOfficer") {
           location.href = "/pages/aoDash.html";
         }
-        if (data.data.role === 'farmerOne'){
+        if (data.data.role === "farmerOne") {
           location.href = "/pages/foDash.html";
         }
-        if (data.data.role === 'urbanFarmer'){
+        if (data.data.role === "urbanFarmer") {
           location.href = "/pages/ufDash.html";
         }
-        if (data.data.role === 'user') {
+        if (data.data.role === "user") {
           location.href = "/pages/Products.html";
         }
       }, 500);
