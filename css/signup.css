@@ -154,7 +154,7 @@ form input:focus {
     border: 1px solid grey;
     border-radius: 15px;
     outline: none;
-    color: black !important; /* Ensure text color is visible in responsive mode */
+    color: white !important; /* Text color for responsive mode */
   }
 
   .btn {
