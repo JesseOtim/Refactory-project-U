@@ -58,7 +58,7 @@ form input {
   border-radius: 15px;
   outline: none;
   background-color: transparent;
-  color: white;
+  color: black !important;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -154,6 +154,7 @@ form input:focus {
     border: 1px solid grey;
     border-radius: 15px;
     outline: none;
+    color: black !important; /* Ensure text color is visible in responsive mode */
   }
 
   .btn {
