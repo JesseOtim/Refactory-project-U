@@ -1,4 +1,4 @@
-var baseUrl = "http://localhost:3000/api/auth/";
+var baseUrl = "http://localhost:3001/api/auth/";
 
 const submitButton = document.getElementById("submitbutton");
 submitButton.addEventListener("click", newSignup);
